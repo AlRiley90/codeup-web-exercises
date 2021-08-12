@@ -33,4 +33,12 @@ var facebookPay = facebookWork * 350;
 var payCheck = (googlePay + amazonPay + facebookPay)
 alert("You made " + payCheck + " dollars this week! Congrats!")
 
+var isSpace = confirm("Is there a seat available in the class?")
+var noConflict = confirm("Click cancel if there is no conflict with your current schedule and this class")
+alert("Congratulations, you can enroll in this course.")
 
+var numberOfItems = prompt("How many items are you purchasing today?")
+parseInt(numberOfItems);
+var expired = confirm("Click cancel if this offer expired?")
+var premiumMember = confirm("Click Ok if you are a premium member")
+alert("Your discount has been applied!")
