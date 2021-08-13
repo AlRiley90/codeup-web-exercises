@@ -10,7 +10,6 @@
  */
 
 function sayHello(name){
-    var name = "Alex";
     return "Hello, " + name;
 }
 console.log(sayHello());
@@ -83,9 +82,9 @@ console.log(calculateTip(.2, 20));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
 //  */
-// var bill = prompt("How much is the bill?")
-// var tipAmount = prompt("What percent are you leaving for the tip?")
-// alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for the tip" )
+var bill = prompt("How much is the bill?")
+var tipAmount = prompt("What percent are you leaving for the tip?")
+alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for the tip" )
 // //come back to this to perfect having two decimal places
 
 /**
@@ -102,13 +101,13 @@ console.log(calculateTip(.2, 20));
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
-// var x = prompt("What is the original price of the product?");
-// var y = prompt("What is the amount that should be discounted?");
-// function applyDiscount(){
-//     return x - (x * (y/100));
-// }
-//
-// alert("The final price for your purchase after the discount will be $" + applyDiscount());
+var x = prompt("What is the original price of the product?");
+var y = prompt("What is the amount that should be discounted?");
+function applyDiscount(){
+    return x - (x * (y/100));
+}
+
+alert("The final price for your purchase after the discount will be $" + applyDiscount());
 
 
 //The following portion is additional work assigned from Slack
