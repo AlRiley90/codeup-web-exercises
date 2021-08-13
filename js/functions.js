@@ -82,11 +82,11 @@ console.log(calculateTip(.2, 20));
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
- */
-var bill = prompt("How much is the bill?")
-var tipAmount = prompt("What percent are you leaving for the tip?")
-alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for the tip" )
-//come back to this to perfect having two decimal places
+//  */
+// var bill = prompt("How much is the bill?")
+// var tipAmount = prompt("What percent are you leaving for the tip?")
+// alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for the tip" )
+// //come back to this to perfect having two decimal places
 
 /**
  * TODO:
@@ -101,11 +101,131 @@ alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for t
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
- */
-var x = prompt("What is the original price of the product?");
-var y = prompt("What is the amount that should be discounted?");
-function applyDiscount(){
-    return x - (x * (y/100));
+//  */
+// var x = prompt("What is the original price of the product?");
+// var y = prompt("What is the amount that should be discounted?");
+// function applyDiscount(){
+//     return x - (x * (y/100));
+// }
+//
+// alert("The final price for your purchase after the discount will be $" + applyDiscount());
+
+
+//The following portion is additional work assigned from Slack
+function returnTwo(){
+    return 2;
+}
+console.log(returnTwo());
+
+function sayHowdy(){
+    console.log("Howdy!");
+}
+function returnName(){
+    return "Alex";
+}
+console.log(returnName())
+
+function addThree(x){
+    return x + 3;
+}
+console.log(addThree(5));
+
+function sayString(z){
+    return z;
+}
+console.log(sayString("coduep"))
+
+function identity(input){
+    return input;
 }
 
-alert("The final price for your purchase after the discount will be $" + applyDiscount());
+function getRandomNumber(min, max){
+    //Need help with this one
+}
+function first(input){
+    var firstLetter = input.charAt(0);
+    return firstLetter;
+}
+console.log(first("varsity"))
+
+function last(input){
+   var lastLetter = input.charAt(input.length-1);
+   return lastLetter;
+}
+console.log(last("eagles"))
+
+function rest(input){
+    var allButFirstAndLast = input.substring(1, input.length-1);
+    return allButFirstAndLast;
+}
+console.log(rest("Mississippi"));
+
+function reverse(input){
+    var splitString = input.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+}
+console.log(reverse("variety"));
+
+function isNumeric(input){
+    if(typeof input === "number"){
+        return true;
+    } return false;
+}
+console.log(isNumeric("red"))
+
+function count(input){
+    var letterCount = input.length;
+    return letterCount;
+}
+console.log(count("fixture"))
+
+function add(a, b){
+    var sum = a + b;
+    return sum;
+}
+console.log(add(15, 20))
+
+function subtract(a, b){
+    var difference = a - b;
+    return difference;
+}
+console.log(subtract(27, 12))
+
+function multiply(a, b){
+    var product = a * b;
+    return product;
+}
+console.log(multiply(10, 24))
+
+function divide(numerator, denominator){
+    var quotient = numerator / denominator;
+    return quotient;
+}
+console.log(divide(25, 5))
+
+function remainder(number, divisor){
+    var remainder = number % divisor;
+    return remainder;
+}
+console.log(remainder(5, 2));
+
+function square(a){
+    var squared = a * a;
+    return squared;
+}
+console.log(square(6))
+
+function sumOfSquares(a, b){
+   var squareA = square(a);
+   var squareB = square(b);
+   return add(squareA, squareB)
+}
+console.log(sumOfSquares(3, 4))
+
+function doMath(multiply, a, b){
+    var theProduct = multiply(a, b);
+    return theProduct;
+}
+console.log(doMath(multiply, 7, 5));
