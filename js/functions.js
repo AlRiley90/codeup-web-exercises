@@ -85,7 +85,7 @@ console.log(calculateTip(.2, 20));
 var bill = prompt("How much is the bill?")
 var tipAmount = prompt("What percent are you leaving for the tip?")
 alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for the tip" )
-// //come back to this to perfect having two decimal places
+//come back to this to perfect having two decimal places
 
 /**
  * TODO:
@@ -97,7 +97,7 @@ alert("You should leave $" + calculateTip(bill, tipAmount/100) + " dollars for t
  * Example:
  * > var originalPrice = 100;
  * > var dicountPercent = .2; // 20%
- * > applyDiscount(originalPrice, dicountPercent) // 80
+ * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
