@@ -100,23 +100,23 @@ analyzeColor(usersColor);
  * return value.
  */
 function calculateTotal(luckyNumber, totalAmount){
-    if(luckyNumber == 0){
-        alert("You drew the number 0. You don't get a discount today. Your total is $" + totalAmount);
-    }else if(luckyNumber == 1){
+    if(luckyNumber === 0){
+        alert("You drew the number 0. You don't get a discount today. Your total is $" + totalAmount.toFixed(2));
+    }else if(luckyNumber === 1){
         var oneDiscount = totalAmount * .1;
-        alert("Congratulations, you drew the number 1 you get a 10% discount today! " + "Your total before the discount is " + totalAmount +". Your new total is $" + (totalAmount - oneDiscount));
-    }else if(luckyNumber == 2){
+        alert("Congratulations, you drew the number 1 you get a 10% discount today! " + "Your total before the discount is " + totalAmount.toFixed(2) +". Your new total is $" + (totalAmount - oneDiscount).toFixed(2));
+    }else if(luckyNumber === 2){
         var twoDiscount = totalAmount * .25;
-        alert("Congratulations, you drew the number 2 you get a 25% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - twoDiscount));
-    }else if(luckyNumber == 3){
+        alert("Congratulations, you drew the number 2 you get a 25% discount today! " + "Your total before the discount is " + totalAmount.toFixed(2) + ". Your new total is $" + (totalAmount - twoDiscount).toFixed(2));
+    }else if(luckyNumber === 3){
         var threeDiscount = totalAmount * .35;
-        alert("Congratulations, you drew the number 3 you get a 35% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - threeDiscount));
-    }else if(luckyNumber == 4){
+        alert("Congratulations, you drew the number 3 you get a 35% discount today! " + "Your total before the discount is " + totalAmount.toFixed(2) + ". Your new total is $" + (totalAmount - threeDiscount).toFixed(2));
+    }else if(luckyNumber === 4){
         var fourDiscount = totalAmount * .5;
-        alert("Congratulations, you drew the number 4 you get a 50% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - fourDiscount));
-    } else if(luckyNumber == 5){
+        alert("Congratulations, you drew the number 4 you get a 50% discount today! " + "Your total before the discount is " + totalAmount.toFixed(2) + ". Your new total is $" + (totalAmount - fourDiscount).toFixed(2));
+    } else if(luckyNumber === 5){
         var fiveDiscount = totalAmount * 0;
-        alert("Congratulations! You drew our grand prize number 5! You are the luckiest of all and get your items free today! Your total before this is applied would have been $" + totalAmount);
+        alert("Congratulations! You drew our grand prize number 5! You are the luckiest of all and get your items free today! Your total before this is applied would have been $" + totalAmount.toFixed(2));
     } else{
         alert("This number is outside of our parameter and. Please try again");
     }
@@ -130,7 +130,7 @@ function calculateTotal(luckyNumber, totalAmount){
  */
 //Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
-var totalAmount = prompt("Please enter your total bill for your purchase today")
+var totalAmount = Number(prompt("Please enter your total bill for your purchase today"))
 calculateTotal(luckyNumber, totalAmount)
 
 /**
@@ -149,3 +149,33 @@ calculateTotal(luckyNumber, totalAmount)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+function numberAnalysis() {
+    var enterNumber = confirm("Would you like to enter a number value for analysis?");
+    if (enterNumber) {
+        var usersNumber = parseInt(prompt("Please enter any number"));
+    }
+    if (usersNumber % 2 === 0) {
+        alert("Your number is even");
+        alert("Your number plus 100 is " + (usersNumber + 100));
+        if (userNumber < 0) {
+            alert("Your number is negative");
+        } else if (userNumber > 0) {
+            alert("Your number is positive");
+        } else {
+            alert('Your number is 0');
+        }
+    } else if (usersNumber % 2 === 1) {
+        alert("Your number is odd");
+        alert("Your number plus 100 is " + (usersNumber + 100));
+        if (usersNumber < 0) {
+            alert("Your number is negative");
+        } else if (usersNumber > 0) {
+            alert("Your number is positive");
+        } else {
+            alert('Your number is 0');
+        }
+    } else {
+        alert("You did not enter an appropriate value for this analysis")
+    }
+} numberAnalysis();
+
