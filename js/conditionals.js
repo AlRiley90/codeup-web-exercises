@@ -19,6 +19,18 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+function analyzeColor(color) {
+    if(color === "blue"){
+       console.log("Blue is the color of the sky");
+    } else if(color === "red") {
+         console.log("Strawberries are red");
+    } else if(color === "cyan"){
+         console.log("I don't know anything about cyan")
+    } else{
+       console.log("I don't have any random facts for the color you chose")
+    }
+}
+analyzeColor("red");
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -32,24 +44,27 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-if(randomColor){
-    console.log(randomColor)
-}
+analyzeColor(randomColor)
+    console.log(randomColor);
+
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-var favoriteColor = prompt("What is your favorite color?")
-switch(favoriteColor){
-    case "green":
-        alert("What a coincidence, that is my favorite color too");
+
+switch(randomColor){
+    case "blue":
+        alert("blue is the color of the sky");
         break;
     case "red":
-        alert("Eh, that color is ok");
+        alert("Strawberries are red");
+        break;
+    case "cyan":
+        alert("I don't know anything about cyan")
         break;
     default:
-        alert(favoriteColor + " is a good color... I guess.")
+        alert("I don't have a random fact about the color chosen.")
         break;
 }
 /**
@@ -57,8 +72,12 @@ switch(favoriteColor){
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
- */
-
+*/
+var usersColor = prompt("Please enter any color of your choosing");
+function analyzeColor(usersColor) {
+    return alert("Your color is " + usersColor);
+}
+analyzeColor(usersColor);
 /* ########################################################################## */
 
 /**
@@ -80,7 +99,28 @@ switch(favoriteColor){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
+function calculateTotal(luckyNumber, totalAmount){
+    if(luckyNumber == 0){
+        alert("You drew the number 0. You don't get a discount today. Your total is $" + totalAmount);
+    }else if(luckyNumber == 1){
+        var oneDiscount = totalAmount * .1;
+        alert("Congratulations, you drew the number 1 you get a 10% discount today! " + "Your total before the discount is " + totalAmount +". Your new total is $" + (totalAmount - oneDiscount));
+    }else if(luckyNumber == 2){
+        var twoDiscount = totalAmount * .25;
+        alert("Congratulations, you drew the number 2 you get a 25% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - twoDiscount));
+    }else if(luckyNumber == 3){
+        var threeDiscount = totalAmount * .35;
+        alert("Congratulations, you drew the number 3 you get a 35% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - threeDiscount));
+    }else if(luckyNumber == 4){
+        var fourDiscount = totalAmount * .5;
+        alert("Congratulations, you drew the number 4 you get a 50% discount today! " + "Your total before the discount is " + totalAmount + ". Your new total is $" + (totalAmount - fourDiscount));
+    } else if(luckyNumber == 5){
+        var fiveDiscount = totalAmount * 0;
+        alert("Congratulations! You drew our grand prize number 5! You are the luckiest of all and get your items free today! Your total before this is applied would have been $" + totalAmount);
+    } else{
+        alert("This number is outside of our parameter and. Please try again");
+    }
+}
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -88,8 +128,10 @@ switch(favoriteColor){
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+//Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalAmount = prompt("Please enter your total bill for your purchase today")
+calculateTotal(luckyNumber, totalAmount)
 
 /**
  * TODO:
