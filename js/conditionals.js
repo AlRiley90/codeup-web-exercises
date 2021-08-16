@@ -49,7 +49,7 @@ switch(favoriteColor){
         alert("Eh, that color is ok");
         break;
     default:
-        alert(favoriteColor + " that is a good color... I guess.")
+        alert(favoriteColor + " is a good color... I guess.")
         break;
 }
 /**

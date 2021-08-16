@@ -39,6 +39,8 @@ alert("Congratulations, you can enroll in this course.")
 
 var numberOfItems = prompt("How many items are you purchasing today?")
 parseInt(numberOfItems);
-var expired = confirm("Click cancel if this offer expired?")
 var premiumMember = confirm("Click Ok if you are a premium member")
-alert("Your discount has been applied!")
+var expired = confirm("Click cancel if this offer expired?")
+//alert("Your discount has been applied!")
+
+alert("Customer can use the discount" + ((numberOfItems > 2 || premiumMember) && expired));
