@@ -1,0 +1,26 @@
+"use strict"
+
+function showMultiplicationTable(num, i){
+    var i = 1;
+    do{
+        var product = num * i;
+        console.log(num + " x " + i + " = " + product);
+        i++;
+    } while (i <= 10);
+}
+function isEvenOrOdd() {
+    for (var i = 0; i < 10; i++) {
+        var randomInt = Math.floor(Math.random() * (200 - 20 + 1) + 20);
+        if (randomInt % 2 === 0) {
+            console.log(randomInt + " is an even number")
+        } else {
+            console.log(randomInt + " is an odd number")
+        }
+    }
+}
+// console.log(isEvenOrOdd());
+// //Question 4 of the exercise need to ask for help
+// for(var i = 1; i < 10; i++) {
+//
+//     console.log("" + i + i);
+// }
