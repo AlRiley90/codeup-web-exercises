@@ -99,17 +99,17 @@ for (var i = 1; i < 25; i++){
     else console.log(i);
 }
 
-// TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
-var i = 0;
-
-while(i < 25){
-    if(i % 6 == 0){
-        console.log("Codeup");
-        i++;
-    }else if(i % 2){
-        console.log()
-    }
-}
+// // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
+// var i = 0;
+//
+// while(i < 25){
+//     if(i % 6 == 0){
+//         console.log("Codeup");
+//         i++;
+//     }else if(i % 2 == 0){
+//         console.log("Code")
+//     }
+// }
 // Below is a funky example that works, but will rely on moving between different data types.
 // for (var i = "A"; i.length < 8; i = i + "A") {
 //     console.log("This is a bit of a tricky way to run a for loop, but hey, it works...");
