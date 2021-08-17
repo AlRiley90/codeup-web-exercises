@@ -30,7 +30,7 @@ function analyzeColor(color) {
        console.log("I don't have any random facts for the color you chose")
     }
 }
-analyzeColor("red");
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -157,9 +157,9 @@ function numberAnalysis() {
     if (usersNumber % 2 === 0) {
         alert("Your number is even");
         alert("Your number plus 100 is " + (usersNumber + 100));
-        if (userNumber < 0) {
+        if (usersNumber < 0) {
             alert("Your number is negative");
-        } else if (userNumber > 0) {
+        } else if (usersNumber > 0) {
             alert("Your number is positive");
         } else {
             alert('Your number is 0');
