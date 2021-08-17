@@ -54,7 +54,7 @@ function pluralize(noun, number){
 //     var x = generations.toString(prompt("Enter a positive number between 0 and 3 for descendents or a number between 0 and -3 for ancestors"))
 //     var y = generations.toString(prompt("Enter an 'm' for male or an 'f' for female"))
 //     if(y ==="f" || y === "F"){
-//     else if (x === -1) {
+//      if (x === -1) {
 //             alert("This would be my mother")
 //         } else if (x === -2) {
 //             alert("This would be my grandmother")
@@ -86,4 +86,4 @@ function pluralize(noun, number){
 //         }
 //     }
 // }
-// generations(x, y);
+// generations();
