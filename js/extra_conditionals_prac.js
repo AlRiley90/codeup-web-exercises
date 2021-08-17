@@ -22,3 +22,29 @@ function signBeforeNumber(x){
 }
 signBeforeNumber()
 //w3resource third problem
+function assignGrade(yourGrade){
+    var yourGrade = Number(prompt("What grade did you get in your class?"))
+    if(yourGrade >= 90){
+        alert("You got an A in the class!")
+    } else if(yourGrade >= 80 && yourGrade <= 89){
+        alert("You got a B in the class")
+    } else if(yourGrade >= 70 && yourGrade <= 79){
+        alert("You got a C in the course")
+    }else if(yourGrade >= 60 && yourGrade <= 69){
+        alert("You got a D in the course")
+    } else{
+        alert("You failed the course")
+    }
+}
+assignGrade();
+
+//Final practice assignment
+function pluralize(noun, number){
+    if(number > 1){
+        console.log(number + "  " + noun + "s");
+    } else if(number === 0){
+        console.log("There are no " + noun);
+    }else{
+        console.log(number + noun)
+    }
+}
