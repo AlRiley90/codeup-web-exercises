@@ -48,3 +48,42 @@ function pluralize(noun, number){
         console.log(number + noun)
     }
 }
+//Tuesday August 2 practice assignments
+//Need more refactoring
+// function generations(x, y){
+//     var x = generations.toString(prompt("Enter a positive number between 0 and 3 for descendents or a number between 0 and -3 for ancestors"))
+//     var y = generations.toString(prompt("Enter an 'm' for male or an 'f' for female"))
+//     if(y ==="f" || y === "F"){
+//     else if (x === -1) {
+//             alert("This would be my mother")
+//         } else if (x === -2) {
+//             alert("This would be my grandmother")
+//         } else if (x === -3) {
+//             alert("This would be my great Grandmother")
+//         } else if (x === 1) {
+//             alert("This would be my daughter")
+//         } else if (x === 2) {
+//             alert("This would be my granddaughter")
+//         } else if (x === 3) {
+//             alert("This would be my great granddaughter")
+//         }
+//     else if(y === "m" || "M"){
+//         if(x === -1){
+//             alert("This would be my father")
+//         }else if(x === -2){
+//             alert("This would be my grandfather")
+//         }else if(x === -3){
+//             alert("This would be my great grandfather")
+//         }else if(x === 1){
+//             alert("This would be my son")
+//         }else if(x === 2){
+//             alert("This would be my grandson")
+//         }else if(x === 3){
+//             alert("This would be my great grandson")
+//         }else{
+//             alert("Me! Me!")
+//         }
+//         }
+//     }
+// }
+// generations(x, y);
