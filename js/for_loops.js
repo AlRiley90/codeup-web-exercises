@@ -20,10 +20,13 @@ function isEvenOrOdd() {
 }
 // console.log(isEvenOrOdd());
 // //Question 4 of the exercise need to ask for help
-// for(var i = 1; i < 10; i++) {
-//
-//     console.log("" + i + i);
-// }
+var addThis = 1;
+for(var i = "1"; i.length < 10; i = i + addThis) {
+
+    console.log(i);
+    addThis++;
+}
+
 var i;
 for (i = 100; i > 0; i -= 5){
     if(i === 0){
