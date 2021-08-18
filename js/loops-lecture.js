@@ -50,10 +50,14 @@
 // while (false) {
 //     console.log("will you ever see me?");
 // }
-//
-// do {
-//     console.log("But what about me?");
-// } while (false);
+
+do {
+    console.log("But what about me?");
+} while (false){
+    if(true){
+        console.log("Do I see this")
+    }
+}
 
 // Notice that even with a condition that has a boolean value of false, the do while loop will run one time be for stopping.
 //Below is a great example of setting up a password feature
@@ -92,12 +96,12 @@
 
 // And we can use this with conditionals!
 //FIZZ BUZZ
-for (var i = 1; i < 25; i++){
-    if (i % 6 == 0) console.log("Codeup");
-    else if (i % 2 == 0) console.log("Code");
-    else if (i % 3 == 0) console.log("Up");
-    else console.log(i);
-}
+// for (var i = 1; i < 25; i++){
+//     if (i % 6 == 0) console.log("Codeup");
+//     else if (i % 2 == 0) console.log("Code");
+//     else if (i % 3 == 0) console.log("Up");
+//     else console.log(i);
+// }
 
 // // TODO: Quasar, how would we refactor the above back into a WHILE loop as we saw earlier?
 // var i = 0;
@@ -141,15 +145,15 @@ for (var i = 1; i < 25; i++){
 
 // we can also use continue to allow a loop to skip an iteration.
 
-function allOddNumbersToX (x) {
-    for (var i = 0; i <= x; i++) {
-        if (i % 2 === 0) {
-            continue;
-        }
-        console.log(i);
-    }
-    return x;
-}
+// function allOddNumbersToX (x) {
+//     for (var i = 0; i <= x; i++) {
+//         if (i % 2 === 0) {
+//             continue;
+//         }
+//         console.log(i);
+//     }
+//     return x;
+// }
 
 // allOddNumbersToX(17);
 // allOddNumbersToX(18);
