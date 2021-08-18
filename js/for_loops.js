@@ -24,3 +24,10 @@ function isEvenOrOdd() {
 //
 //     console.log("" + i + i);
 // }
+var i;
+for (i = 100; i > 0; i -= 5){
+    if(i === 0){
+        break;
+    }
+    console.log(i);
+}
