@@ -13,9 +13,9 @@ console.log("There are " + allCones + " to sell");
         if (conesInSale > allCones) {
             console.log("Cannot sell you " + conesInSale + "cones. I only have " + allCones + "left")
         }
-    } while (conesLeft > 0) {
-            console.log("Yay! I sold them all")
-        }
+    } while (conesLeft > 0);
+console.log("Yay! I sold them all")
+
 
 
 

@@ -8,6 +8,8 @@ function showMultiplicationTable(num, i){
         i++;
     } while (i <= 10);
 }//showMultiplicationTable(5)
+
+
 function isEvenOrOdd() {
     for (var i = 0; i < 10; i++) {
         var randomInt = Math.floor(Math.random() * (200 - 20 + 1) + 20);
@@ -19,6 +21,9 @@ function isEvenOrOdd() {
     }
 }// isEvenOrOdd();
 // console.log(isEvenOrOdd());
+
+
+
 // //Question 4 of the exercise need to ask for help
 
 for(var i = 1; i.length < 10; i++) {

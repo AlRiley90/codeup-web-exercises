@@ -31,6 +31,19 @@ function analyzeColor(color) {
     }
 }
 
+//Instructor's edition
+// function analyzeColorI(color){
+//     var message;
+//     if(color === "blue"){
+//         message = "Blue is the color of the sky";
+//     }else if(color === "red"){
+//         message = "Strawberries are red";
+//     }else if(color === "cyan"){
+//         message = "I don't know anything about cyan"
+//     }
+//     return message;
+// }
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -118,7 +131,7 @@ function calculateTotal(luckyNumber, totalAmount){
         var fiveDiscount = totalAmount * 0;
         alert("Congratulations! You drew our grand prize number 5! You are the luckiest of all and get your items free today! Your total before this is applied would have been $" + totalAmount.toFixed(2));
     } else{
-        alert("This number is outside of our parameter and. Please try again");
+        alert("This number is outside of our parameter. Please try again");
     }
 }
 /**
@@ -179,3 +192,4 @@ function numberAnalysis() {
     }
 } numberAnalysis();
 
+//Use parseInt() to convert a string to a whole number, use Number() to convert a string with decimals to a number
