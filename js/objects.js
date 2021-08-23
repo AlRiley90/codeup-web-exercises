@@ -160,10 +160,19 @@ books.forEach(function(book,index){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    var newBook1 = {
+        title: prompt("Please enter a book title"),
+        author:{
+            firstName: prompt("What is the author's first name?"),
+            lastName: prompt("What is the author's last name?")
+        }
+        }
+    function createBook(){
 
-    function createBook(title, author){
-        var newBook = {};
+      return books.push(newBook1);
 
     }
+    createBook();
+    console.log(books);
 
 })();
