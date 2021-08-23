@@ -142,8 +142,8 @@ myCar.turnOn = function(){
 //Let's tie some things together: Let's make a garage with another car!
 
 //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
-//Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
-var wifeysCar = {
+// Also note: we used the keyword *this* on the other vehicle's turnOn function, so this will be a good experiment to see the results
+ var wifeysCar = {
     firstname: "Ruby",
     lastName: "Riley",
     make: "Ford",
@@ -151,8 +151,8 @@ var wifeysCar = {
     turnOn: function(){
         alert("Putting the key in the ignition and fired up " + this.make + " " + this.model);}
 }
-
-wifeysCar.features = ["heated seats", "Sun roof/moon roof", "rear windshield wiper", "Four wheel drive"]
+//
+// wifeysCar.features = ["heated seats", "Sun roof/moon roof", "rear windshield wiper", "Four wheel drive"]
 var myGarage = [myCar, wifeysCar];
 
 console.log(myGarage);
