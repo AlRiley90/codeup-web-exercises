@@ -10,7 +10,8 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    var planetsArray = planetsString.split(" ")
+    //Made an edit to use the vertical bar as the seperator for the strings
+    var planetsArray = planetsString.split("|")
 
      console.log(planetsArray);
 
@@ -26,4 +27,9 @@
      */
 var newPlanetString = planetsArray.join("<br>");
 console.log(newPlanetString);
+
+
+//Bonus:
+    var planetsHTML = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
+    console.log(planetsHTML);
 })();
