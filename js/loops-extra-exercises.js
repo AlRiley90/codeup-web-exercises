@@ -12,7 +12,18 @@
  * Notes
  * Expect any positive number between 1 and 1000.
  */
-
+//
+// function addUp(num){
+//     for (var i = 1; i <= num; i++){
+//         var sum = num + i;
+//         if(i < num){
+//             i++;
+//         }else{
+//             return sum;
+//         }
+//     }
+// }
+// addUp();
 
 /**
  * TODO:
@@ -27,7 +38,11 @@
  * Notes
  * Your output must be case-sensitive (see second example).
  */
+function charCount(theLetter, theWord){
+    for(var i =0; i<theWord.length; i++){
 
+    }
+}
 
 /**
  * TODO:
