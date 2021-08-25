@@ -85,17 +85,22 @@ isAvgWhole([1, 1, 1])
  * Create a function named sortDrinkByPrice that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
  *
  * Assume that the following array of drink objects needs to be sorted:
- * drinks = [
- *     {name: "lemonade", price: 50},
- *     {name: "lime", price: 10}
- * ]
+
  *
  * Examples
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
-function sortDrinkByPrice(){
-
+drinks = [
+    {name: "lemonade", price: 50},
+    {name: "lime", price: 10},
+    {name: "sprite", price: 5},
+    {name: "water", price: 0}
+]
+function sortDrinkByPrice(drinks){
+    drinks.sort((a,b) => (a.price > b.price) ? 1:-1)
+    console.log(drinks)
 }
+sortDrinkByPrice(drinks);
 
 /**
  * Scrabble Hand
