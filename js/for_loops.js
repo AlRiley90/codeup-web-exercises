@@ -12,7 +12,19 @@ function showMultiplicationTable(num, i){
 //Instructor edition
 // for (var i = 1; i <=10; i++)
 
-
+// //
+// function isEvenOrOdd() {
+//     var randomInt = Math.floor(Math.random() * (200 - 20 + 1) + 20);
+//     for (var i = 0; i < 10; i++) {
+//         if (randomInt % 2 === 0) {
+//             console.log(randomInt + " is an even number")
+//         } else {
+//             console.log(randomInt + " is an odd number")
+//         }
+//     }
+// }
+//     isEvenOrOdd();
+//
 function isEvenOrOdd() {
     for (var i = 0; i < 10; i++) {
         var randomInt = Math.floor(Math.random() * (200 - 20 + 1) + 20);
@@ -22,10 +34,35 @@ function isEvenOrOdd() {
             console.log(randomInt + " is an odd number")
         }
     }
+}
     isEvenOrOdd();
-    console.log(isEvenOrOdd());
+//
+//     var randomNumber = Math.floor(Math.random() * (200 - 20 + 1) + 20);
+//     function isOddOrEven(randomNumber){
+//         for(var a = 0; a < 10; a++){
+//             if(randomNumber % 2 === 0){
+//                 console.log(("Your number " + randomNumber + " is even"));
+//             }else{
+//                 console.log(("Your number " + randomNumber + " is odd"));
+//             }
+//         }
+//     }
+//     isOddOrEven(randomNumber);
+//     console.log(isOddOrEven(randomNumber));
 
-
+// function isEvenOrOdd() {
+//     var randomInt = Math.floor(Math.random() * (200 - 20 + 1) + 20);
+//     var i = 0;
+//     while (i < 10) {
+//         if (randomInt % 2 === 0) {
+//             console.log(randomInt + " is an even number.")
+//         } else {
+//             console.log(randomInt + " is and odd number.")
+//         }
+//         i++;
+//     }
+// }
+// isEvenOrOdd();
 //Instructors Edition question 4
     function NumTriangle() {
         for (var i = 1; i < 10; i++) {
@@ -50,7 +87,7 @@ function isEvenOrOdd() {
         }
         console.log(answer);
     }
-}
+
 
 
 var i;

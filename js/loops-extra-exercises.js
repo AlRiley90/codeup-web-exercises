@@ -13,17 +13,15 @@
  * Expect any positive number between 1 and 1000.
  */
 //
-// function addUp(num){
-//     for (var i = 1; i <= num; i++){
-//         var sum = num + i;
-//         if(i < num){
-//             i++;
-//         }else{
-//             return sum;
-//         }
-//     }
-// }
-// addUp();
+function addUp(num){
+    for (var i = 1; i <= num; i++){
+        var sum = num + i;
+        while(i<num){
+       i++;
+       }
+    }return sum;
+}
+addUp(4);
 
 /**
  * TODO:
@@ -38,12 +36,18 @@
  * Notes
  * Your output must be case-sensitive (see second example).
  */
-function charCount(theLetter, theWord){
-    for(var i =0; i<theWord.length; i++){
-
+function charCount(theLetter, theString){
+    var letterCount = 0;
+    for(var i =0; i<theLetter.length; i++){
+        if(theLetter.charAt(i) == theString){
+            letterCount+=1;
+        }
     }
+    return letterCount;
 }
-
+charCount("b", "big fat bubble");
+charCount("c", "Chamber of secrets");
+charCount("a", "edabit");
 /**
  * TODO:
  * Return the Index of the First Vowel
