@@ -66,7 +66,13 @@ charCount("a", "edabit");
  * Input always contains a vowel.
  */
 
-
+function firstVowel(string){
+   var vowelSpot = string.search(/["aeiouAEIOU"]/);
+   console.log(vowelSpot);
+}
+firstVowel("pInEaPPLe")
+firstVowel("STRAWBERRY")
+firstVowel("hello")
 /**
  * TODO:
  * Integer Digits Count
@@ -84,8 +90,12 @@ charCount("a", "edabit");
  * Notes
  * For an added challenge, try to solve this without using strings.
  */
-
-
+function count(num){
+    return num.length;
+}
+count(638476)
+count(654321)
+count(-314890)
 /**
  * TODO:
  * Remove the Letters ABC
