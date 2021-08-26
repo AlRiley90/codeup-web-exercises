@@ -49,13 +49,12 @@ person.sayHello = function(){
         {name: 'George', amount: 320}
     ];
     // var discountAmount = shoppers.amount * .12;
-    var total = shoppers.amount;
 // Number(discountAmount);
 shoppers.forEach(function(shopper){
 if(shopper.amount>200) {
-    console.log("Thank you " + shopper.name + "!" + "You saved $" + shopper.amount*.12 + " off your total. Your new total is $" + (shopper.amount -(shopper.amount * .12) ));
+    console.log("Thank you " + shopper.name + "!" + " You saved $" + shopper.amount*.12 + " off your total of $" + shopper.amount +". Your new total is $" + (shopper.amount -(shopper.amount * .12) ));
 }else{
-        console.log("Sorry " + shopper.name + " you do not get a discount today and will have to pay the full amount of " + shopper.amount);
+        console.log("Sorry " + shopper.name + " you do not get a discount today and will have to pay the full amount of $" + shopper.amount);
     }
 })
 
