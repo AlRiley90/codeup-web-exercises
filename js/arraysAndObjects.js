@@ -132,7 +132,7 @@ sortDrinkByPrice(drinks);
  *      { tile: "E", score: 1 }
  *    ]) ➞ 28
  *
- * >> maximumScore([
+ maximumScore([
  *      { tile: "B", score: 2 },
  *      { tile: "V", score: 4 },
  *      { tile: "F", score: 4 },
@@ -146,7 +146,28 @@ sortDrinkByPrice(drinks);
  * Each tile is represented as an object with two keys: tile and score.
  */
 
+var scrabbleHand = [
+    { tile: "B", score: 2 },
+    { tile: "V", score: 4 },
+    { tile: "F", score: 4 },
+    { tile: "U", score: 1 },
+    { tile: "D", score: 2 },
+    { tile: "O", score: 1 },
+    { tile: "U", score: 1 }
+];
+// function maximumPossibleScore(scrabbleHand){
+//     var score = sum
+//    // for(var i = 0; i<scrabbleHand.length; i++){
+//    //      score+=scrabbleHand.score;
+//    //  }
+//    console.log(score);
+// }
 
+
+
+
+
+//Get help with this one
 /**
  * Converting Objects to Arrays
  * Write a function named toArray that converts an object into an array, where each element represents a key-value pair in the form of an array.
@@ -160,6 +181,19 @@ sortDrinkByPrice(drinks);
  * Notes
  * Return an empty array if the object is empty.
  */
+
+var firstObject = {
+    fistName: "Alex",
+    lastName: "Riley"
+};
+
+var emptyObject = {};
+
+function toArray(array){
+    var newArray = Object.entries(array);
+    console.log(newArray);
+}
+toArray(emptyObject);
 
 
 /**
@@ -175,8 +209,14 @@ sortDrinkByPrice(drinks);
  * Notes
  * Notice that num is also included in the returned array.
  */
-
-
+function arrayOfMultiples(a, b){
+    for(var i = 1; i === b; i++){
+        var array = [];
+        var multiple = a * i;
+        console.log(array.push(multiple));
+    }
+}
+arrayOfMultiples(7, 5);
 /**
  * Get Sum of People's Budget
  * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
