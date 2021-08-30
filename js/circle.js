@@ -37,6 +37,8 @@
 
     console.log("=======================================================");
     // TODO: Change the radius of the circle to 5.
+
+    //Can be accomplished without writing extra code using circle.radius = 5
 var circle = {
     radius: 5,
     getArea: function (){
