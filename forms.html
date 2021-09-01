@@ -14,16 +14,19 @@
 </nav>
 <main>
     <section>
+        <h1>Veridian Dynamics Registration Form</h1>
         <form method="POST" action="https://www.elformo.com/forms/48c85035-6af2-408d-8459-2f4278b95bc9">
 
             <label for="email">Email</label>
-            <input id="email" name="email" type="text" placeholder="Enter your email address">
+            <input id="email" name="email" type="text" placeholder="example@codeup.com">
             <br>
 
             <label for="password">Password</label>
             <input id="password" name="password" type="password" placeholder="Enter your password">
             <br>
-            <textarea name="bio" placeholder="Enter a bit about yourself"></textarea>
+            <label for="bio">About me:</label>
+            <textarea id="bio" placeholder="Enter a bit about yourself"></textarea>
+            <br>
 
 <!--        </form>-->
 <!--        Sometimes a description of the pricing plans for the product-->
@@ -43,7 +46,8 @@
 <!--    <section>-->
 <!--        <form method="POST" action="https://hookb.in/BYloW1NM7zikN6yyNqJX">-->
             Please select the web browser you are using
-        <select name="web browser">
+        <select name="web browser" id="webBrowser selector">
+            <option value="" disabled selected>~~Please choose an option~~</option>
             <option value="chrome">Chrome</option>
             <option value="safari">Safari</option>
             <option value="firefox">Firefox</option>
