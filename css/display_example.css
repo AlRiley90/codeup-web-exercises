@@ -1,0 +1,54 @@
+.box {
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+        /*postive number provides clockwise movement, negative number does counterclockwise movement*/
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    animation-duration: 3s;
+    animation-name: slideIn;
+}
+
+@keyframes slideIn {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+#hiddenDiv {
+    visibility: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+#div {
+    height: 100px;
+    width: 100px;
+    border: black solid 5px;
+}
+
+
+
+
+
+
