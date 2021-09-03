@@ -14,3 +14,15 @@ tellFortune(0, "Adorina", "Houston", "banker");
 //     var output = "You will be a " + title +" in " + loc + ", and married to " + pName + " with " + kids + " kids.";
 //     return output;
 // }
+
+
+
+//Sep3 Warm-up
+function calculateDogAge(age){
+    var dogYears = age * 7;
+    return "Your dog is " + dogYears +" years old in dog years!"
+}
+
+console.log(calculateDogAge(6));
+console.log(calculateDogAge(10));
+console.log(calculateDogAge(3));
