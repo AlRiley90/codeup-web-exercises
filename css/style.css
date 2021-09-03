@@ -62,7 +62,7 @@ table {
     padding-left: 70px;
 }
 td{
-    border: 3px solid goldenrod;
+    border: 3px groove goldenrod;
     padding-right: 2em;
 }
 
