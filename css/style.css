@@ -5,6 +5,7 @@
     /*animation-fill-mode: forwards;*/
     animation-name: slidein-left;
     animation-duration: 4s;
+    text-shadow: 2px 2px 4px darkgray;
 
 
 }
@@ -24,6 +25,10 @@ h3{
     text-decoration: underline;
 }
 
+iframe{
+    background-color: darkgray;
+    border-width: 5px;
+}
 .fade-in-image {
     animation: fadeIn 8s;
     animation-name: fadeIn;
@@ -40,10 +45,12 @@ html{
     background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-e-commerce-city-double-exposure-portrait-synthesis-background-picture-image_1126040.jpg");
     background-size: 1600px;
     font-family: 'Azeret Mono', monospace;
+    background-attachment: fixed;
     /*background-image: url("../img/github_symbol.jpg");*/
 }
 
 p{
+    font-size: large;
     color: darkgoldenrod;
 }
 
@@ -73,9 +80,11 @@ th{
 .product-header{
     color: firebrick;
     font-size: xxx-large;
+    text-shadow: 5px 5px 10px black;
 }
 .company-vision{
     font-size: xx-large;
+    text-shadow: 5px 5px 10px black;
 }
 
 /*.h1{*/
