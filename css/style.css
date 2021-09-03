@@ -1,5 +1,65 @@
 .fancy-header {
-    color: purple;
+    color: darkgoldenrod;
     text-decoration: underline;
+    text-align: center;
+    /*animation-fill-mode: forwards;*/
+    animation-name: slidein-left;
+    animation-duration: 4s;
 
+
+}
+
+@keyframes slidein-left {
+    from{
+        margin-left: 100%;
+        width: 300%
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+h3{
+    text-decoration: underline;
+}
+
+html{
+    height: initial;
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-e-commerce-city-double-exposure-portrait-synthesis-background-picture-image_1126040.jpg");
+    background-size: 1600px;
+    font-family: 'Azeret Mono', monospace;}
+
+p{
+    color: darkgoldenrod;
+}
+
+ol{
+    list-style: upper-roman;
+}
+ul{
+    list-style-type: circle;
+}
+
+table {
+    font-size: large;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 70px;
+}
+td{
+    padding-right: 2em;
+}
+
+th{
+    padding-right: 50px;
+}
+
+.product-header{
+    color: firebrick;
+    font-size: xxx-large;
+}
+.company-vision{
+    font-size: xx-large;
 }
