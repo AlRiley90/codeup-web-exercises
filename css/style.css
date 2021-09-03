@@ -27,7 +27,7 @@ h3{
 .fade-in-image {
     animation: fadeIn 8s;
     animation-name: fadeIn;
-    animation-delay: 3s;
+    animation-delay: 1s;
 
 }
 @keyframes fadeIn {
