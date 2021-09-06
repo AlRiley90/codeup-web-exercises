@@ -32,3 +32,37 @@ function rearrange(word){
 }
 console.log(rearrange("alphabet"));
 console.log(rearrange("random"));
+
+
+// Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. Go to the editor
+//Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
+//
+// function vowelCount(word){
+//     for(var count=0; )
+// }
+
+
+//Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
+
+function isPrime(num){
+    for(var i = 2; i < num; i++){
+        if(num % i !== 0){
+            return false;
+        }
+        return true;
+    }
+}
+console.log(isPrime(17));
+console.log(isPrime(14));
+console.log(isPrime(19));
+
+
+//Write a JavaScript function which accepts an argument and returns the type.
+
+function typeIs(input){
+    return typeof input;
+}
+
+console.log(typeIs(17));
+console.log(typeIs("string"));
+console.log(typeIs("42"));
