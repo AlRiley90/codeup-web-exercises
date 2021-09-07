@@ -8,7 +8,7 @@ body, html {
 
 .message-info{
     border-radius: 10px;
-    background-color: cornflowerblue;
+    background-color: #8EACF6FF;
     margin: 10px 25px;
     border: solid;
     border-color: lightgray;
@@ -18,7 +18,7 @@ body, html {
 
 .message-success{
     border-radius: 10px;
-    background-color: #0fb784;
+    background-color: #64C09EFF;
     margin: 10px 25px;
     border: solid;
     border-color: lightgray;
@@ -28,7 +28,7 @@ body, html {
 
 .message-warning{
     border-radius: 10px;
-    background-color: #f1f173;
+    background-color: #DADA82FF;
     margin: 10px 25px;
     border: solid;
     border-color: lightgray;
@@ -38,7 +38,7 @@ body, html {
 
 .message-error{
     border-radius: 10px;
-    background-color: lightpink;
+    background-color: #F3CED0FF;
     margin: 10px 25px;
     border: solid;
     border-color: lightgray;
