@@ -65,3 +65,7 @@ hr{
     border-color: lightgray;
     margin: 1em;
 }
+
+summary{
+    background-color: #1969B2;
+}
