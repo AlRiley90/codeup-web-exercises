@@ -20,10 +20,7 @@ h2, h3 {
     margin: 0 auto;
     width: 80%;
 }
-/*#greenBox4{*/
-/*    display: flex;*/
-/*   align-self: flex-start;*/
-/*}*/
+
 .green-box {
     background: green;
     height: 1em;
@@ -40,9 +37,9 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
-    /*display: flex;*/
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 
 
@@ -62,10 +59,10 @@ section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
+    /*flex-direction: row;*/
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 
 }
 section:nth-of-type(1) div:last-child {
@@ -93,18 +90,17 @@ section:nth-of-type(1) div:last-child {
     width: 100%;
     background: blue;
     height: 10em;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 section:nth-of-type(3) {
     /* enter needed declarations here */
-    display: flex;
-    flex-direction: row;
+    justify-content: space-around;
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
-    flex: 2;
+    flex-grow: 1;
 
 
 }
@@ -122,26 +118,21 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
-    display: flex;
-    flex-direction: column;
     align-content: space-between;
-    flex-grow: 3;
-    margin-top: 20px;
+    flex-grow: 1;
+    /*margin-top: 20px;*/
 
 }
 
 .large-brown-box:nth-of-type(2) {
     margin: 0 1em;
-    display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 section:nth-of-type(5) {
     /* enter needed declarations here */
-    display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
 }
 
 .yellow-box {
@@ -154,10 +145,8 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
 .grey-box {
