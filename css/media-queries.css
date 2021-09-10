@@ -41,13 +41,46 @@
         display: none;
     }
     h1, nav{
-        display: inline-block;
+
+        display: inline-flex;
+        flex-direction: row;
+
     }
+    h1{
+        margin-right: 30em;
+    }
+
+    /*ul{*/
+    /*    flex-direction: row;*/
+    /*    justify-content: flex-end;*/
+    /*}*/
     .nav-links {
         display: flex;
         flex-direction: row;
-        margin-left: auto;
+        justify-content: flex-end;
+        background-color: white;
 
+    }
+    .nav-links li{
+        background: white;
+    }
+
+    #main{
+        float: left;
+        width: 60%;
+    }
+
+    .sub-section{
+       float: right;
+        width: 35%;
+    }
+    /*section{*/
+    /*    display: flex;*/
+    /*    flex-wrap: wrap;*/
+    /*    flex-direction: column;*/
+    /*}*/
+    footer{
+        clear: both;
     }
 
 }
