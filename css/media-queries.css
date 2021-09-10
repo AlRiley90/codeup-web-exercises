@@ -12,6 +12,7 @@
         align-items: center;
     }
     h1{
+        font-family: 'Open Sans', sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,7 +48,9 @@
 
     }
     h1{
-        margin-right: 30em;
+        font-family: 'Open Sans', sans-serif;
+        margin-right: 20em;
+        font-size: 44px;
     }
 
     /*ul{*/
@@ -81,6 +84,12 @@
     /*}*/
     footer{
         clear: both;
+    }
+    #social-media-links{
+        display: flex;
+        float: right;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
 }
