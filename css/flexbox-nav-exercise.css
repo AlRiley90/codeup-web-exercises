@@ -44,9 +44,11 @@ img{
     font-family: "Trirong", serif;
     font-size: xx-large;
     margin-left: auto;
-    padding-right: 25px;
-    padding-top: 5px;
+    padding: .2em 0;
+    /*padding-right: 25px;*/
+    /*padding-top: 5px;*/
     color: #571cd9;
+
 }
 
 iframe{
