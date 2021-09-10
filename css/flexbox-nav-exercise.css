@@ -21,12 +21,14 @@ ul {
 }
 
 nav a {
+    font-family: 'Alice', Helvetica, sans-serif;
     display: inline-block;
     padding: 1em;
 }
 
 nav a:hover {
     background: black;
+    color: white;
 }
 
 #car{
@@ -39,9 +41,16 @@ img{
 }
 
 #teamName{
-    font-family: 'Alice', Helvetica, sans-serif;
+    font-family: "Trirong", serif;
     font-size: xx-large;
     margin-left: auto;
-    padding-right: 15px;
+    padding-right: 25px;
+    padding-top: 5px;
     color: #571cd9;
+}
+
+iframe{
+    margin-top: 20px;
+    background-color: darkgray;
+    border-width: 5px;
 }
