@@ -1,14 +1,15 @@
 *{
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 nav {
 
-    display: inline-block;
+    display: inline-flex;
     width: 100%;
     height: 50px;
     background: #dc440a;
     box-shadow: 0 2px 4px 0 black;
+
 
 }
 
@@ -27,9 +28,12 @@ li:first-child {
     display: flex;
     background-color: #FFFFFF;
     height: 50px;
-    width: 60px;
+    width: 70px;
+    justify-content: center;
     align-items: center;
 }
+
+
 
 a:first-child{
     padding-left: 10px;
@@ -104,4 +108,55 @@ div:nth-of-type(4){
     justify-content: center;
     align-items: center;
 
+}
+
+.alert-info{
+    display: none;
+}
+
+@media screen and (min-width:1200px){
+
+    nav ul{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+
+
+    }
+    nav a:hover{
+        background: #F9EFD6;
+        color: black;
+        height: 50px;
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+    .alert-info{
+        display: inline-flex;
+        color: white;
+    }
+    .alert-info2{
+        display: none;
+    }
+
+   .alert-home:hover{
+        justify-content: center;
+        align-items: center;
+    }
+   .anchor-paragraph{
+       display: flex;
+       flex-direction: column;
+       padding: 75px 600px 100px 175px;
+
+   }
+
+   .anchor{
+       height: 350px;
+       width: 350px;
+
+
+
+
+   }
 }
