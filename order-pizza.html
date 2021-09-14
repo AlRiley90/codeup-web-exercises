@@ -38,19 +38,22 @@
   </div>
     <h2>Build Your Own Pizza!</h2>
     <hr>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link size-and-crust" href="#"><span class="badge badge-dark">1</span>Size and Crust</a>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#sizeAndCrust" role="tab" aria-controls="sizeAndCrust" aria-selected="true"><span class="badge badge-dark">1</span>Size and Crust</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link cheese-and-sauce" href="#"><span class="badge badge-dark">2</span>Cheese and sauce</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="cheese-and-sauce-tab" data-toggle="tab" href="#cheeseAndSauce" role="tab" aria-controls="cheeseAndSauce" aria-selected="false"><span class="badge badge-dark">2</span>Cheese and sauce</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link toppings" href="#"><span class="badge badge-dark">3</span>Toppings</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link toppings" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-dark">3</span>Toppings</a>
       </li>
     </ul>
+  <div class="tab-content" id="myPizza">
+    <div class="tab-pane fade show active" id="sizeAndCrust" role="tabpanel" aria-labelledby="size-and-crust-tab">
     <div class="card">
-      <h5 class="card-header">Choose size and crust</h5>
+        <h5 class="card-header">Choose size and crust</h5>
+      </div>
       <div class="card-body">
         <div class="list-group">
           <button type="button" class="list-group-item list-group-item-action">
@@ -95,8 +98,9 @@
         </div>
       </div>
     </div>
+  <div class="tab-pane fade" id="cheeseAndSauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
   <div class="card">
-    <h5 class="card-header">Choose cheese and sauce</h5>
+ <h5 class="card-header">Choose cheese and sauce</h5>
     <div class="card-body">
       <div class="card">
         <div class="card-header">
@@ -147,6 +151,8 @@
     </div>
   </div>
   </div>
+  </div>
+  <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
   <div class="card">
     <h5 class="card-header">Choose toppings</h5>
     <div class="card-body">
@@ -229,9 +235,13 @@
           </li>
         </ul>
       </div>
-
+      <div class="card-footer">
+        <a id="checkout" href="#" class="btn btn-primary">Checkout </a>
       </div>
+      </div>
+  </div>
 
+  </div>
   </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
