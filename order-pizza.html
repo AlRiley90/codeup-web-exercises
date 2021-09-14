@@ -38,19 +38,16 @@
   </div>
     <h2>Build Your Own Pizza!</h2>
     <hr>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#sizeAndCrust" role="tab" aria-controls="sizeAndCrust" aria-selected="true"><span class="badge badge-dark">1</span>Size and Crust</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="cheese-and-sauce-tab" data-toggle="tab" href="#cheeseAndSauce" role="tab" aria-controls="cheeseAndSauce" aria-selected="false"><span class="badge badge-dark">2</span>Cheese and sauce</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link toppings" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-dark">3</span>Toppings</a>
-      </li>
-    </ul>
-  <div class="tab-content" id="myPizza">
-    <div class="tab-pane fade show active" id="sizeAndCrust" role="tabpanel" aria-labelledby="size-and-crust-tab">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+        <a class="nav-link active" id="nav-size-and-crust-tab" data-toggle="tab" href="#nav-sizeAndCrust" role="tab" aria-controls="nav-sizeAndCrust" aria-selected="true"><span class="badge badge-dark">1</span>Size and Crust</a>
+        <a class="nav-link" id="nav-cheese-and-sauce-tab" data-toggle="tab" href="#nav-cheeseAndSauce" role="tab" aria-controls="nav-cheeseAndSauce" aria-selected="false"><span class="badge badge-dark">2</span>Cheese and sauce</a>
+        <a class="nav-link" id="nav-toppings-tab" data-toggle="tab" href="#nav-toppings" role="tab" aria-controls="nav-toppings" aria-selected="false"><span class="badge badge-dark">3</span>Toppings</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-sizeAndCrust" role="tabpanel" aria-labelledby="nav-size-and-crust-tab">
     <div class="card">
         <h5 class="card-header">Choose size and crust</h5>
       </div>
@@ -74,6 +71,8 @@
           </div>
         </div>
       </div>
+
+<!--      Tab Pane 2-->
       <div class="card-body">
         <div class="list-group">
           <button type="button" class="list-group-item list-group-item-action">
@@ -98,7 +97,7 @@
         </div>
       </div>
     </div>
-  <div class="tab-pane fade" id="cheeseAndSauce" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
+  <div class="tab-pane fade" id="nav-cheeseAndSauce" role="tabpanel" aria-labelledby="nav-cheese-and-sauce-tab">
   <div class="card">
  <h5 class="card-header">Choose cheese and sauce</h5>
     <div class="card-body">
@@ -152,7 +151,9 @@
   </div>
   </div>
   </div>
-  <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+
+<!--    Tab Pane 3-->
+  <div class="tab-pane fade" id="nav-toppings" role="tabpanel" aria-labelledby="nav-toppings-tab">
   <div class="card">
     <h5 class="card-header">Choose toppings</h5>
     <div class="card-body">
