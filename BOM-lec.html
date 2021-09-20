@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM lecture</title>
+</head>
+<body>
+<script>
+    // var sayHello = window.setInterval(function(),5000)
+
+
+
+    //TODO: Finish coding this program. You need to stop the setInterval() method after the showTime() function has run five times
+
+
+    let count = 0;
+    var max = 5;
+    function showTime() {
+
+        // return new date and time
+        let dateTime = new Date();
+
+        // return the time
+        let time = dateTime.toLocaleTimeString();
+
+        count += 1;
+
+        //if the count reaches 5, stop the program.
+        if(count >= max){
+            clearInterval(display)
+        }
+        console.log(time)
+    }
+        //display below is the variable that clearInterval() wants for the id
+    let display = setInterval(showTime, 5000);
+</script>
+</body>
+</html>

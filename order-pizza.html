@@ -32,22 +32,28 @@
     </div>
   </nav>
   <div class="container d-none d-lg-block">
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron px-0 mt-5">
         <h1 class="display-4">Welcome to Pizza World!</h1>
     </div>
   </div>
     <h2>Build Your Own Pizza!</h2>
     <hr>
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-        <a class="nav-link active" id="nav-size-and-crust-tab" data-toggle="tab" href="#nav-sizeAndCrust" role="tab" aria-controls="nav-sizeAndCrust" aria-selected="true"><span class="badge badge-dark">1</span>Size and Crust</a>
-        <a class="nav-link" id="nav-cheese-and-sauce-tab" data-toggle="tab" href="#nav-cheeseAndSauce" role="tab" aria-controls="nav-cheeseAndSauce" aria-selected="false"><span class="badge badge-dark">2</span>Cheese and sauce</a>
-        <a class="nav-link" id="nav-toppings-tab" data-toggle="tab" href="#nav-toppings" role="tab" aria-controls="nav-toppings" aria-selected="false"><span class="badge badge-dark">3</span>Toppings</a>
-    </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-sizeAndCrust" role="tabpanel" aria-labelledby="nav-size-and-crust-tab">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true"><span class="badge badge-dark">1</span>Size and Crust</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge badge-dark">2</span>Cheese and sauce</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-dark">3</span>Toppings</a>
+      </li>
+    </ul>
+
+  <div class="tab-content" id="myTabContent">
+<!--    TAB PANE 1-->
+    <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
     <div class="card">
         <h5 class="card-header">Choose size and crust</h5>
       </div>
@@ -72,7 +78,7 @@
         </div>
       </div>
 
-<!--      Tab Pane 2-->
+
       <div class="card-body">
         <div class="list-group">
           <button type="button" class="list-group-item list-group-item-action">
@@ -97,7 +103,8 @@
         </div>
       </div>
     </div>
-  <div class="tab-pane fade" id="nav-cheeseAndSauce" role="tabpanel" aria-labelledby="nav-cheese-and-sauce-tab">
+    <!--      Tab Pane 2-->
+  <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
   <div class="card">
  <h5 class="card-header">Choose cheese and sauce</h5>
     <div class="card-body">
@@ -153,7 +160,7 @@
   </div>
 
 <!--    Tab Pane 3-->
-  <div class="tab-pane fade" id="nav-toppings" role="tabpanel" aria-labelledby="nav-toppings-tab">
+  <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
   <div class="card">
     <h5 class="card-header">Choose toppings</h5>
     <div class="card-body">
@@ -244,7 +251,9 @@
 
   </div>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>-->
 <!-- Your custom JS goes here -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
