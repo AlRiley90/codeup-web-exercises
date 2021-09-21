@@ -34,10 +34,11 @@
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
         if(detonationTimer > 0){
-            clearInterval(updateTimer);
+            clearInterval(display);
             alert("You saved the internets!")
         }
-        // clearInterval(updateTimer);
+        //Just this part alone is enough to make it work
+        // clearInterval(display);
     }
 
     // Don't modify anything below this line!
