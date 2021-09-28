@@ -1,0 +1,17 @@
+#coffeeMaker{
+    height: 100%;
+    width: 100%;
+
+}
+
+@keyframes turnOff{
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+    }
+}

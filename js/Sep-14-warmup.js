@@ -21,13 +21,29 @@
 
 //Sept 21 warmup
 //Function that prints all even numbers up to a given number.
-function logEvens(num){
+// function logEvens(num){
+//     for(var i = 1; i <= num; i++){
+//         if(i % 2 === 0){
+//             console.log(i);
+//         }
+//     }
+// }
+// logEvens(10);
+// logEvens(20);
+// logEvens(30);
+
+
+//Sept 22 warmup
+function logNum(num){
     for(var i = 1; i <= num; i++){
         if(i % 2 === 0){
-            console.log(i);
+            console.log(i + " is an even number")
+        } else{
+            console.log(i + " is an odd number")
         }
     }
 }
-logEvens(10);
-logEvens(20);
-logEvens(30);
+
+logNum(10);
+logNum(15);
+logNum(18);
