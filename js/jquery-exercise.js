@@ -24,22 +24,18 @@ $("img").css("padding-left", "30px");
 
 $("span").css("display", "none");
 
+// var imgUrl = "img/normal-football.jpeg";
+    $(".footballs").css("background-image", "url('img/normal-football.jpeg')").css("background-size", "50px").css("z-index", "500").css("background-repeat", "repeat-x");
+
 $("h1").click(function(){
-    // if("background-color"=== "red") {
         $(this).css("background-color", "black")
-    // }else{
-    //     $(this).css("background-color", "red")
-    // }
 });
 
 $("li").click(function(){
         $(this).css("color", "black").css("font-size", "40px");
-        $("span").css("display", "inherit");
+        $(this).children("span").css("display", "inherit");
 });
 
-// $("h1").click(function(){
-//     $(this).css("background-color", "red")
-// });
 $(".logo").dblclick(function(){
      $(this).css("border", "2px solid lightgray")
 });
