@@ -14,7 +14,10 @@ $("main").css("background", "lightgrey");
 
 $("#title").css("text-align", "center")
 
-$("li").css("font-size", "20px").css("list-style", "none");
+$(".sked").css("font-size", "30px").css("list-style", "none").css("border", "2px solid black");
 
 $("html").css("border", "20px solid black");
 
+$(".sked").css("text-align", "center");
+
+$("img").css("padding-left", "30px");
