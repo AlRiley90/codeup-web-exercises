@@ -14,15 +14,17 @@ $("main").css("background", "lightgrey");
 
 $("#title").css("text-align", "center")
 
-$(".sked").css("font-size", "30px").css("list-style", "none").css("border", "2px solid black");
+$(".sked").css("font-size", "30px").css("list-style", "none");
 
 $("html").css("border", "20px solid black");
 
 $(".sked").css("text-align", "center");
 
-$("img").css("padding-left", "30px");
+$("#ugga").css("width", "650px");
 
 $("span").css("display", "none");
+
+$("#helmet").css("width", "750px")
 
 // var imgUrl = "img/normal-football.jpeg";
     $(".footballs").css("background-image", "url('img/normal-football.jpeg')").css("background-size", "50px").css("z-index", "500").css("background-repeat", "repeat-x");

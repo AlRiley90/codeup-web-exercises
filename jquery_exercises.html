@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <title>~ ~ jQuery Bulldogs Page~ ~</title>
 
 </head>
 <body>
-<div class="container-fluid flex w-100">
-
-    <h1 id="title"><img class="logo" src="img/Bulldog_logo.png">Georgia Bulldogs<img class="logo" src="img/Bulldog_logo.png"></h1>
-    <h3 id="title2">Go Dawgs!</h3>
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <img class="logo" src="img/Bulldog_logo.png">
+        </div>
+        <div class="col-4">
+            <h1 id="title">Georgia Bulldogs</h1>
+        </div>
+        <div class="col-4" style="padding-left: 300px">
+            <img class="logo" src="img/Bulldog_logo.png">
+        </div>
+        <div class="col">
+            <h3 class="text-align: center" id="title2">Go Dawgs!</h3>
+        </div>
+    </div>
 </div>
-<!--<section class="ga-stripe">-->
-<!--    <ul>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--        <li class="stripe"></li>-->
-<!--    </ul>-->
-<!--</section>-->
 <div class="footballs" style="height: 50px; background-repeat: repeat-x;"></div>
 <main>
     <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at consequatur, dolores est eum magnam modi obcaecati porro repudiandae rerum sunt tempora temporibus, ullam ut voluptatibus. Accusamus dolor exercitationem perspiciatis.</p>
@@ -35,9 +32,9 @@
     <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore labore neque omnis placeat voluptas voluptate? Aut iusto labore necessitatibus obcaecati quae quaerat tenetur vel! Dolor fugiat obcaecati provident quia quis.</p>
 
     <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto debitis incidunt laudantium magni molestias provident quis sunt vero. Commodi eos in libero odio pariatur quod quos rem tempore, voluptate?</p>
-    <div class="container">
-        <div class="row">
-            <ul class="sked">
+    <div class="container-fluid">
+        <div class="row text-align: center">
+            <ul class="sked ml-auto mr-auto">
                 <li><i class="fas fa-football-ball"></i> W vs Clemson: 10-3</li>
                 <li><i class="fas fa-football-ball"></i> W vs UAB: 56-7</li>
                 <li><i class="fas fa-football-ball"></i> W vs S. Carolina: 40-13</li>
@@ -51,7 +48,7 @@
                 <li><i class="far fa-football-ball"></i> Nov. 20 vs Charleston So<span> Kickoff: TBA</span></li>
                 <li><i class="far fa-football-ball"></i> Nov. 27 vs Georgia Tech<span> Kickoff: TBA</span></li>
              </ul>
-        <img src="img/GA_helmet.jpeg"><img src="img/UGGA.jpeg">
+        <img id="helmet" class="position: fixed" src="img/GA_helmet.jpeg"><img id="ugga" class="ml-0" src="img/UGGA.jpeg">
         </div>
     </div>
 </main>
