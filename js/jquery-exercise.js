@@ -26,12 +26,18 @@ $("span").css("display", "none");
 
 $("#helmet").css("width", "750px")
 
+// $(".field").css("background-image", "url('img/the_hedges.jpeg')").css("text-decoration", "underline");
+
 // var imgUrl = "img/normal-football.jpeg";
     $(".footballs").css("background-image", "url('img/normal-football.jpeg')").css("background-size", "50px").css("z-index", "500").css("background-repeat", "repeat-x");
 
 $("h1").click(function(){
         $(this).css("background-color", "black")
 });
+
+// $(".field").click(function(){
+//     $("body").css("display", "inherit").css("background-size", "100%");
+// });
 
 $("li").click(function(){
         $(this).css("color", "black").css("font-size", "40px");
