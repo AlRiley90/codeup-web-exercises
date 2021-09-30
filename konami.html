@@ -3,33 +3,51 @@
 <head>
     <title>Konami Code</title>
 </head>
-<!--<style>-->
-<!--    body{-->
-<!--        background-image: "";-->
-<!--    }-->
-<!--</style>-->
 <body>
 <h1>Konami Code</h1>
+<div id="timer">
+    <h2>Hurry!! Enter the Konami code!!</h2>
+    <h3 id="displayTimer" onkeyup="timer()">00:07</h3>
+</div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 <script>
     "use strict";
     var konamiCode = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter";
     var yourCode = "";
     var audio = new Audio("audio/Hadouken.mp3");
     var evilAudio = new Audio("audio/bowser_laugh.wav");
+
+
     alert("Use the Hadouken before it's too late!!!!");
-    $("body").keyup(function(event) {
-        console.log("you entered the key: " + event.key);
+    function timer(){
+        var sec = 6;
+        var timer = setInterval(function(){
+            document.getElementById("displayTimer").innerHTML="00:0" + sec;
+            sec--;
+            if (sec < 0) {
+                $("body").css("background-image", "url('../img/tekken_lose.gif");
+            }
+        }, 1000);
+    }
+    $("#displayTimer").keyup(function(timer) {
+    return timer();
+});
+
+
+    $("body").keyup(function (event) {
+        // console.log("you entered the key: " + event.key);
         yourCode += event.key;
-        console.log(yourCode);
-        if(yourCode === konamiCode){
-           audio.play();
-           $("body").css("background-image", "url('../img/hadouken.gif')").css("background-size", "100%");
-           $("h1").css("color", "white");
-        }
-        else if(yourCode !== konamiCode){
+        // console.log(yourCode);
+        if (yourCode === konamiCode) {
+            audio.play();
+            $("body").css("background-image", "url('../img/hadouken3.gif')").css("background-size", "100%");
+            $("h1").css("color", "white");
+            $("h2").css("color", "white");
+            $("h3").css("color", "white");
+        } else if (yourCode !== konamiCode) {
             evilAudio.play();
             $("body").css("background-image", "url('../img/evil_street_fighter.gif").css("background-size", "100%");
         }
