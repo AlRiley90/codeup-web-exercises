@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<p>Game of Thrones FAQs:</p>
+
+<dl>
+    <dt>What is GoT about?</dt>
+    <dd class="invisible">Game of Thrones is an epic fantasy series where a number of individuals and noble houses vie for control of the "Iron Throne" which rules over the realm.</dd>
+
+    <dt>Is GoT based on a book?</dt>
+    <dd class="invisible">Yes, it's based on the series A Song of Ice and Fire written by George RR Martin and takes its name from the first book in the series.</dd>
+
+    <dt>If I want to start reading the books what one should I start with?</dt>
+    <dd class="invisible">1. A Game of Thrones 2. A Clash of Kings 3. A Storm of Swords 4. A Feast for Crows 5. A Dance with Dragons <br>And coming soon.... The Winds of Winter</dd>
+
+    <dt>Where does the story take place?</dt>
+    <dd class="invisible">The show takes place in an imaginary land called Westeros.</dd>
+
+    <dt>What are the names of the various noble houses in Westeros?</dt>
+    <dd class="invisible">There are four noble houses at the center of the story: The Starks, the Lannisters, the Baratheons, and the Targaryeons</dd>
+
+     <dt>When is winter coming? What does that mean?</dt>
+     <dd class="invisible">Winter is coming has several meanings - it's literal, in that a very long winter is ahead. It's the motto of house Stark, and it's a symbolic statement about the dark periods of life that inevitably happen to everyone.
+     </dd>
+
+     <dt>Is GoT officially over?</dt>
+     <dd class="invisible">GoT itself is over, however HBO announced several spin-offs in production</dd>
+
+    <h3>Spoilers alert</h3>
+     <dt>Are Jon and Dany related?</dt>
+     <dd class="invisible">Yes, Jon is actually Dany's nephew. Her older brother is his father.</dd>
+
+    <dt>What's the significance of Jon's real name being Aegon Targeryen?</dt>
+    <dd class="invisible">Aegon Targaryen was the name of the original conqueror of Westeros. He and his sisters rode in on their dragons and started the entire Targaryen dynasty. Long story short, it’s kind of a big deal and Jon has some major shoes to fill.</dd>
+
+    <dt>Between Jon and Daenerys, who has a better claim to the Iron Throne</dt>
+    <dd class="invisible">Technically, Jon does. You see, Rhaegar was the heir to the Iron Throne, which means his son is ahead of his siblings in the line of succession. Khaleesi is not gonna like this.</dd>
+
+</dl>
+
+<a href="#" id="show-answer">Click to toggle the answers for the questions.</a>
+<!-- https://www.imdb.com/title/tt0944947/faq/-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+
+<script>
+    // $(").css("visibility", "hidden");
+
+
+        $("#show-answer").click(function(event){
+            event.preventDefault();
+            $("dd").toggleClass("invisible");
+        });
+
+</script>
+</body>
+</html>
