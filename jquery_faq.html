@@ -2,22 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <title>Title</title>
     <style>
-        .invisible{
+        .invisible {
             visibility: hidden;
         }
 
-        .highlight{
+        .highlight {
             background-color: yellow;
         }
 
-        .bold{
+        .bold {
             font-weight: bold;
         }
 
-        .turn-blue{
+        .turn-blue {
             color: blue;
+        }
+
+        .dany {
+            background-image: url("img/dany.jpeg");
+            height: 200px;
+            width: 100px;
+            border: 5px solid saddlebrown;
+        }
+
+        .eddard {
+            background-image: url("img/eddard.jpeg");
+            height: 303px;
+            width: 250px;
+            border: 5px solid saddlebrown;
+        }
+
+        .tyrion {
+            background-image: url("img/tyrion.jpeg");
+            height: 203px;
+            width: 300px;
+            border: 5px solid saddlebrown;
+        }
+
+        .column {
+            float: left;
+            width: 18.33%;
+            padding: 5px;
+            margin-right: 10px;
+
+        }
+        .row{
+            justify-content: space-evenly;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 </head>
@@ -26,38 +67,55 @@
 
 <dl>
     <dt>What is GoT about?</dt>
-    <dd class="invisible">Game of Thrones is an epic fantasy series where a number of individuals and noble houses vie for control of the "Iron Throne" which rules over the realm.</dd>
+    <dd class="invisible">Game of Thrones is an epic fantasy series where a number of individuals and noble houses vie
+        for control of the "Iron Throne" which rules over the realm.
+    </dd>
 
     <dt>Is GoT based on a book?</dt>
-    <dd class="invisible">Yes, it's based on the series A Song of Ice and Fire written by George RR Martin and takes its name from the first book in the series.</dd>
+    <dd class="invisible">Yes, it's based on the series A Song of Ice and Fire written by George RR Martin and takes its
+        name from the first book in the series.
+    </dd>
 
     <dt>If I want to start reading the books what one should I start with?</dt>
-    <dd class="invisible">1. A Game of Thrones 2. A Clash of Kings 3. A Storm of Swords 4. A Feast for Crows 5. A Dance with Dragons <br>And coming soon.... The Winds of Winter</dd>
+    <dd class="invisible">1. A Game of Thrones 2. A Clash of Kings 3. A Storm of Swords 4. A Feast for Crows 5. A Dance
+        with Dragons <br>And coming soon.... The Winds of Winter
+    </dd>
 
     <dt>Where does the story take place?</dt>
     <dd class="invisible">The show takes place in an imaginary land called Westeros.</dd>
 
     <dt>What are the names of the various noble houses in Westeros?</dt>
-    <dd class="invisible">There are four noble houses at the center of the story: The Starks, the Lannisters, the Baratheons, and the Targaryeons</dd>
+    <dd class="invisible">There are four noble houses at the center of the story: The Starks, the Lannisters, the
+        Baratheons, and the Targaryeons
+    </dd>
 
-     <dt>When is winter coming? What does that mean?</dt>
-     <dd class="invisible">Winter is coming has several meanings - it's literal, in that a very long winter is ahead. It's the motto of house Stark, and it's a symbolic statement about the dark periods of life that inevitably happen to everyone.
-     </dd>
+    <dt>When is winter coming? What does that mean?</dt>
+    <dd class="invisible">Winter is coming has several meanings - it's literal, in that a very long winter is ahead.
+        It's the motto of house Stark, and it's a symbolic statement about the dark periods of life that inevitably
+        happen to everyone.
+    </dd>
 
-     <dt>Is GoT officially over?</dt>
-     <dd class="invisible">GoT itself is over, however HBO announced several spin-offs in production</dd>
+    <dt>Is GoT officially over?</dt>
+    <dd class="invisible">GoT itself is over, however HBO announced several spin-offs in production</dd>
 
     <h3>Spoilers alert</h3>
-     <dt>Are Jon and Dany related?</dt>
-     <dd class="invisible">Yes, Jon is actually Dany's nephew. Her older brother is his father.</dd>
+    <dt>Are Jon and Dany related?</dt>
+    <dd class="invisible">Yes, Jon is actually Dany's nephew. Her older brother is his father.</dd>
 
     <dt>What's the significance of Jon's real name being Aegon Targeryen?</dt>
-    <dd class="invisible">Aegon Targaryen was the name of the original conqueror of Westeros. He and his sisters rode in on their dragons and started the entire Targaryen dynasty. Long story short, it’s kind of a big deal and Jon has some major shoes to fill.</dd>
+    <dd class="invisible">Aegon Targaryen was the name of the original conqueror of Westeros. He and his sisters rode in
+        on their dragons and started the entire Targaryen dynasty. Long story short, it’s kind of a big deal and Jon has
+        some major shoes to fill.
+    </dd>
 
     <dt>Between Jon and Daenerys, who has a better claim to the Iron Throne</dt>
-    <dd class="invisible">Technically, Jon does. You see, Rhaegar was the heir to the Iron Throne, which means his son is ahead of his siblings in the line of succession. Khaleesi is not gonna like this.</dd>
+    <dd class="invisible">Technically, Jon does. You see, Rhaegar was the heir to the Iron Throne, which means his son
+        is ahead of his siblings in the line of succession. Khaleesi is not gonna like this.
+    </dd>
 
 </dl>
+<a href="#" id="show-answer">Click to toggle the answers for the questions.</a>
+<hr>
 <h3 id="starks-heading">The Starks</h3>
 <ul id="starks">
     <li>Rob</li>
@@ -81,39 +139,51 @@
     <li>Tyrion</li>
     <li>Jaime (King Slayer!)</li>
 </ul>
+<div class="row">
+    <div class="dany column">
+        <button type="button" id="btn1"></button>
+    </div>
+    <div class="eddard column">
 
-<a href="#" id="show-answer">Click to toggle the answers for the questions.</a>
+    </div>
+    <div class="tyrion column">
 
-<button type="button" id="button">Highlight last list item</button>
+    </div>
+</div>
+<div class="row mt-5">
+
+
+    <button type="button" id="button">Highlight last list item</button>
+</div>
 <!-- https://www.imdb.com/title/tt0944947/faq/-->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
 
 <script>
-    // $(").css("visibility", "hidden");
 
-    $("#button").click(function(e){
+
+    $("#button").click(function (e) {
         e.preventDefault();
-        $("ul").each(function(){
+        $("ul").each(function () {
             $(this).children().last().toggleClass("highlight");
         })
     });
 
-    $("h3").click(function(e){
+    $("h3").click(function (e) {
         e.preventDefault();
         $(this).next().children().toggleClass("bold");
     });
 
 
-        $("#show-answer").click(function(event){
-            event.preventDefault();
-            $("dd").toggleClass("invisible");
-        });
+    $("#show-answer").click(function (event) {
+        event.preventDefault();
+        $("dd").toggleClass("invisible");
+    });
 
-        $("li").click(function(e){
-            e.preventDefault();
-            $(this).parent().children().first().toggleClass("turn-blue");
-        })
+    $("li").click(function (e) {
+        e.preventDefault();
+        $(this).parent().children().first().toggleClass("turn-blue");
+    })
 
 </script>
 </body>
