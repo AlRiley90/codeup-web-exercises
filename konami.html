@@ -6,8 +6,8 @@
 <body>
 <h1>Konami Code</h1>
 <div id="timer">
-    <h2>Hurry!! Enter the Konami code!!</h2>
-    <h3 id="displayTimer" onkeyup="timer()">00:07</h3>
+    <h2><span class="hurry">Hurry!! Enter the Konami code!!</span><span class="win">You survived!!</span></h2>
+    <h3 id="displayTimer" onkeyup="updateTimer()"></h3>
 </div>
 
 
@@ -22,20 +22,40 @@
 
 
     alert("Use the Hadouken before it's too late!!!!");
-    function timer(){
-        var sec = 6;
-        var timer = setInterval(function(){
-            document.getElementById("displayTimer").innerHTML="00:0" + sec;
-            sec--;
-            if (sec < 0) {
-                $("body").css("background-image", "url('../img/tekken_lose.gif");
-            }
-        }, 1000);
-    }
-    $("#displayTimer").keyup(function(timer) {
-    return timer();
-});
 
+    //Timer function -- need to get help here
+
+    // $(document).ready(timer());
+    //
+    // function timer(){
+    //     var sec = 6;
+    //     var timer = setInterval(function(){
+    //         document.getElementById("displayTimer").innerHTML="00:0" + sec;
+    //         sec--;
+    //         if (sec < 0) {
+    //             $("body").css("background-image", "url('../img/tekken_lose.gif");
+    //         }
+    //     }, 1000);
+    // }
+
+    var detonationTimer = 7;
+
+    // TODO: This function needs to be called once every second
+    function updateTimer() {
+        if (detonationTimer === 0) {
+            $("body").css("background-image", "url('../img/tekken_lose.gif").css("background-size", "100%");
+            document.body.innerHTML = '';
+        } else if (detonationTimer > 0) {
+            document.getElementById('displayTimer').innerHTML = detonationTimer;
+        }
+
+        detonationTimer--;
+
+    }
+    let display = setInterval(updateTimer, 1000);
+
+
+    $(".win").css("display", "none");
 
     $("body").keyup(function (event) {
         // console.log("you entered the key: " + event.key);
@@ -44,12 +64,15 @@
         if (yourCode === konamiCode) {
             audio.play();
             $("body").css("background-image", "url('../img/hadouken3.gif')").css("background-size", "100%");
+            $(".win").css("display", "revert");
+            $(".hurry").css("display", "none");
             $("h1").css("color", "white");
             $("h2").css("color", "white");
             $("h3").css("color", "white");
         } else if (yourCode !== konamiCode) {
             evilAudio.play();
             $("body").css("background-image", "url('../img/evil_street_fighter.gif").css("background-size", "100%");
+            $(".hurry").css("display", "none");
         }
     });
 </script>
