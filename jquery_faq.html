@@ -7,6 +7,18 @@
         .invisible{
             visibility: hidden;
         }
+
+        .highlight{
+            background-color: yellow;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+
+        .turn-blue{
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -46,8 +58,33 @@
     <dd class="invisible">Technically, Jon does. You see, Rhaegar was the heir to the Iron Throne, which means his son is ahead of his siblings in the line of succession. Khaleesi is not gonna like this.</dd>
 
 </dl>
+<h3 id="starks-heading">The Starks</h3>
+<ul id="starks">
+    <li>Rob</li>
+    <li>Eddard</li>
+    <li>Arya</li>
+    <li>Sansa</li>
+    <li>Bran</li>
+    <li>Rickon</li>
+</ul>
+<h3 id="targeryen-heading">the Targeryens</h3>
+<ul id="targeryens">
+    <li>Daenerys</li>
+    <li>Viserys</li>
+    <li>Rhaegar</li>
+    <li>Aegon (Jon)</li>
+</ul>
+<h3 id="lannisters-heading">The Lannisters</h3>
+<ul id="lannisters">
+    <li>Tywin</li>
+    <li>Cersei</li>
+    <li>Tyrion</li>
+    <li>Jaime (King Slayer!)</li>
+</ul>
 
 <a href="#" id="show-answer">Click to toggle the answers for the questions.</a>
+
+<button type="button" id="button">Highlight last list item</button>
 <!-- https://www.imdb.com/title/tt0944947/faq/-->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
@@ -55,11 +92,28 @@
 <script>
     // $(").css("visibility", "hidden");
 
+    $("#button").click(function(e){
+        e.preventDefault();
+        $("ul").each(function(){
+            $(this).children().last().toggleClass("highlight");
+        })
+    });
+
+    $("h3").click(function(e){
+        e.preventDefault();
+        $(this).next().children().toggleClass("bold");
+    });
+
 
         $("#show-answer").click(function(event){
             event.preventDefault();
             $("dd").toggleClass("invisible");
         });
+
+        $("li").click(function(e){
+            e.preventDefault();
+            $(this).parent().children().first().toggleClass("turn-blue");
+        })
 
 </script>
 </body>
