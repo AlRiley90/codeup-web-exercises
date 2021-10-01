@@ -7,12 +7,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <title>Title</title>
     <style>
+        body {
+            background-image: url("img/Got_bg.webp");
+            background-size: 100%;
+            color: whitesmoke;
+        }
+
+        div{
+            margin-top: 15px;
+        }
+        dl > * {
+            margin-top: 10px;
+        }
+
         .invisible {
             visibility: hidden;
         }
 
         .highlight {
-            background-color: yellow;
+            background-color: #efef74;
         }
 
         .bold {
@@ -32,7 +45,7 @@
 
         .eddard {
             background-image: url("img/eddard.jpeg");
-            height: 303px;
+            height: 263px;
             width: 250px;
             border: 5px solid saddlebrown;
         }
@@ -51,7 +64,12 @@
             margin-right: 10px;
 
         }
-        .row{
+
+        .row {
+            justify-content: space-evenly;
+        }
+
+        .button-row {
             justify-content: space-evenly;
         }
 
@@ -60,44 +78,49 @@
             clear: both;
             display: table;
         }
+
+        .col-4 {
+            max-width: 17.33%;
+        }
     </style>
 </head>
 <body>
 <p>Game of Thrones FAQs:</p>
 
 <dl>
-    <dt>What is GoT about?</dt>
-    <dd class="invisible">Game of Thrones is an epic fantasy series where a number of individuals and noble houses vie
-        for control of the "Iron Throne" which rules over the realm.
-    </dd>
-
-    <dt>Is GoT based on a book?</dt>
-    <dd class="invisible">Yes, it's based on the series A Song of Ice and Fire written by George RR Martin and takes its
-        name from the first book in the series.
-    </dd>
-
-    <dt>If I want to start reading the books what one should I start with?</dt>
-    <dd class="invisible">1. A Game of Thrones 2. A Clash of Kings 3. A Storm of Swords 4. A Feast for Crows 5. A Dance
-        with Dragons <br>And coming soon.... The Winds of Winter
-    </dd>
-
-    <dt>Where does the story take place?</dt>
-    <dd class="invisible">The show takes place in an imaginary land called Westeros.</dd>
-
-    <dt>What are the names of the various noble houses in Westeros?</dt>
-    <dd class="invisible">There are four noble houses at the center of the story: The Starks, the Lannisters, the
-        Baratheons, and the Targaryeons
-    </dd>
-
-    <dt>When is winter coming? What does that mean?</dt>
-    <dd class="invisible">Winter is coming has several meanings - it's literal, in that a very long winter is ahead.
-        It's the motto of house Stark, and it's a symbolic statement about the dark periods of life that inevitably
-        happen to everyone.
-    </dd>
-
-    <dt>Is GoT officially over?</dt>
-    <dd class="invisible">GoT itself is over, however HBO announced several spin-offs in production</dd>
-
+    <div>
+        <dt>What is GoT about?</dt>
+        <dd class="invisible">Game of Thrones is an epic fantasy series where a number of individuals and noble houses vie for control of the "Iron Throne" which rules over the realm.
+        </dd>
+    </div>
+    <div>
+        <dt>Is GoT based on a book?</dt>
+        <dd class="invisible">Yes, it's based on the series A Song of Ice and Fire written by George RR Martin and takes its name from the first book in the series.
+        </dd>
+    </div>
+    <div>
+        <dt>If I want to start reading the books what one should I start with?</dt>
+        <dd class="invisible">1. A Game of Thrones 2. A Clash of Kings 3. A Storm of Swords 4. A Feast for Crows 5. A Dance with Dragons <br>And coming soon.... The Winds of Winter
+        </dd>
+    </div>
+    <div>
+        <dt>Where does the story take place?</dt>
+        <dd class="invisible">The show takes place in an imaginary land called Westeros.</dd>
+    </div>
+    <div>
+        <dt>What are the names of the various noble houses in Westeros?</dt>
+        <dd class="invisible">There are four noble houses at the center of the story: The Starks, the Lannisters, the Baratheons, and the Targaryeons
+        </dd>
+    </div>
+    <div>
+        <dt>When is winter coming? What does that mean?</dt>
+        <dd class="invisible">Winter is coming has several meanings - it's literal, in that a very long winter is ahead. It's the motto of house Stark, and it's a symbolic statement about the dark periods of life that inevitably happen to everyone.
+        </dd>
+    </div>
+    <div>
+        <dt>Is GoT officially over?</dt>
+        <dd class="invisible">GoT itself is over, however HBO announced several spin-offs in production</dd>
+    </div>
     <h3>Spoilers alert</h3>
     <dt>Are Jon and Dany related?</dt>
     <dd class="invisible">Yes, Jon is actually Dany's nephew. Her older brother is his father.</dd>
@@ -139,20 +162,20 @@
     <li>Tyrion</li>
     <li>Jaime (King Slayer!)</li>
 </ul>
-<div class="row">
-    <div class="dany column">
-        <button type="button" id="btn1"></button>
+<div class="row mb-3">
+    <div class="dany col-4 column">
     </div>
-    <div class="eddard column">
-
+    <div class="eddard col-4 column">
     </div>
-    <div class="tyrion column">
-
+    <div class="tyrion col-4 column">
     </div>
 </div>
+<div class="row button-row">
+    <button type="button" id="btn1" class="col-2 btn-dark">Button 1</button>
+    <button type="button" id="btn2" class="col-2 btn-dark">Button 2</button>
+    <button type="button" id="btn3" class="col-2 btn-dark">Button 3</button>
+</div>
 <div class="row mt-5">
-
-
     <button type="button" id="button">Highlight last list item</button>
 </div>
 <!-- https://www.imdb.com/title/tt0944947/faq/-->
@@ -164,6 +187,7 @@
 
     $("#button").click(function (e) {
         e.preventDefault();
+        //Prevents the event from happening before pressing the button
         $("ul").each(function () {
             $(this).children().last().toggleClass("highlight");
         })
@@ -171,7 +195,7 @@
 
     $("h3").click(function (e) {
         e.preventDefault();
-        $(this).next().children().toggleClass("bold");
+        $(this).next().toggleClass("bold");
     });
 
 
