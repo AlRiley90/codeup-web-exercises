@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Ground Up Blog</title>
+    <style>
+        body{
+            background-image: url("img/sky_bkgd.jpeg");
+            background-size: 100% 800px;
+            color: whitesmoke;
+        }
+        h3{
+            color: black;
+        }
+        h5{
+            color: #3d4144;
+        }
+
+        div:nth-of-type(6){
+            color: #1B0F1C;
+        }
+    </style>
+</head>
+<body>
+
+<div id="posts">
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    $.get("data/blog.json").done(function(data) {
+        console.log(data);
+        //title, content, categories, date
+        data.forEach(function(post){
+            $("#posts").append("<div>" + "<h3>" + post.title + "</h3></div>" + "<div><p>" + post.content + "</p></div>" + "<div><h5>" + post.categories + "</h5></div>" + "<div><h6>" + post.date + "</h6></div>")
+        })
+    });
+</script>
+</body>
+</html>
