@@ -6,7 +6,9 @@
 <body>
 
 <h1>My Tool Store</h1>
-
+<form action="">
+    <button id="refresh">Refresh!</button>
+</form>
 <table id="products">
     <thead>
         <tr>
@@ -24,20 +26,29 @@
 <script>
 (function() {
     "use strict";
+    tableDisplay();
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.get("data/inventory.json").done(function(data){
-        console.log(data);
 
+
+        $("#refresh").click(function(e) {
+            e.preventDefault();
+            $("#insertProducts").html("");
+            tableDisplay();
+        })
     // TODO: Take the data from inventory.json and append it to the products table
-    // $("data").each(function(index){
-    //     console.log(index);
-    // }
-    //     for(var i =0; i < data.length; i++)
-        $("tbody").each(function(index) {
-            $("#insertProducts").html("<tr><td>" + data[i].title + data[i].quantity + "$" + data[i].price + data[i].categories + "</td></tr>")
+    function tableDisplay() {
+        $.get("data/inventory.json").done(function(data){
+            console.log(data);
+
+        data.forEach(function (tool) {
+            $("#insertProducts").append("<tr><td>" + tool.title + "</td><td>" + tool.quantity + "</td><td>" + "$" + tool.price + "</td><td>" + tool.categories + "</td></tr>")
+
         })
     })
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    }
+
+
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
