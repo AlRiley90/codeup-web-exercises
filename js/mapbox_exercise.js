@@ -13,23 +13,80 @@ geocode("4712 Richmond Ave, Houston, TX 77027", mapBoxKey).then(function(results
 
     console.log(results);
     var popUp = new mapboxgl.Popup()
-        .setHTML("<h4>Me & wifey's first date/Fav. Restaurant (Bayou City Seafood)</h4>")
+        .setHTML("<h4>Me & wifey's first date/Fav. Restaurant (Bayou City Seafood)</h4><img src='img/bayou-city-seafood-pasta.jpeg'>")
     new mapboxgl.Marker()
         .setLngLat(results)
         .setPopup(popUp)
         .addTo(map)
 
     map.flyTo({center: results})
-
-
 })
 
-//Marker Animation
+geocode("7115 Stonebrook Cove, Lithonia, GA 30058", mapBoxKey).then(function(results2){
+    console.log(results2);
+    var homePopUp = new mapboxgl.Popup()
+        .setHTML("<h4>House I grew up in</h4><img src='img/Old_house.png'>")
+    new mapboxgl.Marker()
+
+        .setLngLat(results2)
+        .setPopup(homePopUp)
+        .addTo(map)
+    map.flyTo({center: results2})
+})
+
+geocode("1 Munro Ave, Cape May, NJ 08204", mapBoxKey).then(function(results3){
+    console.log(results3);
+    var bootCampPopUp = new mapboxgl.Popup()
+        .setHTML("<h4>Coast Guard Bootcamp</h4><img src='img/CG.jpeg'>")
+
+    new mapboxgl.Marker({color: 'orange'})
+        .setLngLat(results3)
+        .setPopup(bootCampPopUp)
+        .addTo(map)
+
+    map.flyTo({center: results3})
+})
+
+geocode("476-498 Hanover St Exd, Boston, MA 02109", mapBoxKey).then(function(station1){
+    console.log(station1);
+    var firstCgStop = new mapboxgl.Popup()
+        .setHTML("<h4>CGC Spencer/First duty station</h4><img src='img/cgc_spencer.jpeg'>")
+
+    new mapboxgl.Marker({color: "orange"})
+        .setLngLat(station1)
+        .setPopup(firstCgStop)
+        .addTo(map)
+})
+
+geocode("1001 Lycoming Ave, McKinleyville, CA 95519", mapBoxKey).then(function(station2){
+    console.log(station2);
+     var secondCgStop = new mapboxgl.Popup()
+         .setHTML("<h4>CG Sector Humboldt Bay</h4><img src='img/humboldt_helo.jpeg'>")
+
+    new mapboxgl.Marker({color: "orange"})
+        .setLngLat(station2)
+        .setPopup(secondCgStop)
+        .addTo(map)
+})
+
+geocode("13411 Hillard St, Houston, TX 77034", mapBoxKey).then(function(station3){
+    console.log(station3);
+    var thirdCgStop = new mapboxgl.Popup()
+        .setHTML("<h4>CG Sector Houston-Galveston</h4><img src='img/sector_houston.jpeg'>")
+
+    new mapboxgl.Marker({color: "orange"})
+        .setLngLat(station3)
+        .setPopup(thirdCgStop)
+        .addTo(map)
+})
+      
+
+// Marker Animation
 // const marker = new mapboxgl.Marker({
 //     color: '#F84C4C' // color it red
 // });
-//
-// // Define the animation.
+
+// Define the animation.
 // function animateMarker(timestamp) {
 //     const radius = 20;
 //
@@ -42,7 +99,8 @@ geocode("4712 Richmond Ave, Houston, TX 77027", mapBoxKey).then(function(results
 //     marker.setLngLat([
 //         // Math.cos(timestamp / 1000) * radius,
 //         -98.4861,
-//         29.4252 + Math.sin(timestamp / 1000) * radius
+//         29.4252
+//         // + Math.sin(timestamp / 1000) * radius
 //     ]);
 //
 //     /*
