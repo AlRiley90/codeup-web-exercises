@@ -262,9 +262,16 @@ getBudgets([
  */
 
 function isSpecialArray(array){
-
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % 2 !== i % 2) {
+            console.log(false);
+    }
+        console.log(true);
+        }
 }
-
+isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3])
+isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3])
+isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3])
 /**
  * Remove Duplicates from an Array
  * Create a function named removeDuplicates that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
@@ -280,6 +287,13 @@ function isSpecialArray(array){
  * Each array item is unique.
  */
 
+function removeDuplicates(array){
+    var unique = [...new Set(array)];
+    console.log(unique);
+}
+removeDuplicates([1, 0, 1, 0])
+removeDuplicates(["The", "big", "cat"])
+removeDuplicates(["John", "Taylor", "John"])
 
 /**
  * Lowercase and Uppercase Map
@@ -294,7 +308,9 @@ function isSpecialArray(array){
  * Notes
  * All of the letters in the input list will always be lowercase.
  */
-
+// function mapping(array){
+//
+// }
 
 /**
  * Can You Spare a Square?
@@ -388,3 +404,16 @@ function isSpecialArray(array){
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
+
+function totalPets(array){
+    var totalPets = 0;
+    for(var i = 0; i < array.length; i++){
+        totalPets+= array[i].pets;
+    }
+    console.log(totalPets + " total pets");
+}
+totalPets([
+      {name: 'Fernando Mendoza', pets: 1},
+      {name: 'Douglas Hirsh', pets: 8},
+      {name: 'Kenneth Howell', pets: 2}
+   ])

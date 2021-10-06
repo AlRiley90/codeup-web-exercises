@@ -9,6 +9,10 @@ var map = new mapboxgl.Map (
 
     });
 
+const nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-left');
+
+
 geocode("4712 Richmond Ave, Houston, TX 77027", mapBoxKey).then(function(results){
 
     console.log(results);
@@ -79,7 +83,35 @@ geocode("13411 Hillard St, Houston, TX 77034", mapBoxKey).then(function(station3
         .setPopup(thirdCgStop)
         .addTo(map)
 })
-      
+
+// var arrRest = [
+//     {name: ,address: }
+//     {}
+//     {}
+// ]
+
+
+// geocode(arrRest[0].address, mapBoxKey).then(function(result){
+//     map.setCenter(result);
+//     var marker = new mapboxgl.Marker()
+//         .setLngLat(result)
+//         .addTo(map);
+//     var restaurant = new mapboxgl.Popup()
+//         .setHTML("<h3>" + arrRest[0].name + "</h3>")
+//     marker.setPopup(restaurant)
+// })
+
+arrRest.forEach(function(input){
+    geocode(input.address, mapBoxKey).then(function(){
+        var marker = new mapboxgl.Marker()
+            .setLngLat(result)
+        .addTo(map);
+    var restaurant = new mapboxgl.Popup()
+        .setHTML("<h3>" + input.name + "</h3>")
+    marker.setPopup(restaurant)
+
+        })
+    })
 
 // Marker Animation
 // const marker = new mapboxgl.Marker({
