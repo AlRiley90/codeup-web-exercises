@@ -9,7 +9,7 @@ var map = new mapboxgl.Map (
 
     });
 
-const nav = new mapboxgl.NavigationControl();
+var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
 
