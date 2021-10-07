@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First WX Map</title>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="keys.js"></script>
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: openWeatherKey,
+        q:     "San Antonio, US",
+        units: "imperial" //Allows for conversion to fahrenheit instead of Kelvin
+    }).done(function(data) {
+        console.log(data);
+    });
+</script>
+</body>
+</html>
