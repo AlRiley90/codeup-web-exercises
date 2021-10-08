@@ -21,6 +21,14 @@
         alert(paragraph);
     })
 
+    //Oct 8 Warmup Convert dt to local time
+    var dt = 1618317040;
+    function timeConverter(dt){
+        var dtInMs = dt * 1000;
+      var dateObj = new Date(dtInMs);
+        return dateObj.toLocaleString();
+    }
+    console.log(timeConverter(dt));
 </script>
 </body>
 </html>
