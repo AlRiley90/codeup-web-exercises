@@ -25,7 +25,9 @@ var button = document.getElementById("searchButton")
              new mapboxgl.Marker()
                  .setLngLat(result)
                  .addTo(map)
-             map.flyTo({center: result})
+             map.flyTo({center: result,
+             zoom: 12
+             })
 
          $.get("https://api.openweathermap.org/data/2.5/onecall", {
              APPID: openWeatherKey,
