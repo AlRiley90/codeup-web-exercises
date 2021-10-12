@@ -8,14 +8,12 @@ var map = new mapboxgl.Map (
         center: [-98.4861, 29.4252]
 
     });
-// var marker = new mapboxgl.Marker()
-//     .setLngLat([-98.4916, 29.4260])
-//      .addTo(map);
+//Nav control
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 var button = document.getElementById("searchButton")
 
-
+        //Placing marker whenever user changes location
      button.addEventListener('click', function(e) {
          e.preventDefault();
          var geoLocation = $("#search").val();
@@ -29,6 +27,7 @@ var button = document.getElementById("searchButton")
              zoom: 12
              })
 
+             //Adding weather background
          $.get("https://api.openweathermap.org/data/2.5/onecall", {
              APPID: openWeatherKey,
              lat: result[1],
@@ -60,7 +59,8 @@ var button = document.getElementById("searchButton")
 
                  var newDt = timeConverter(dt);
 
-                 $(".card-body"+ [i]).html("<div><p>" + newDt +"</p></div>"+ "<h2>" + parseInt(data.daily[i].temp.day) + "</h2><div><h6>" + "Feels like: " + parseInt(data.daily[i].feels_like.day) + "</h6></div>");
+                 //Populates info into cards
+                 $(".card-body"+ [i]).html("<div><p>" + newDt +"</p></div>"+ "<h2>" + parseInt(data.daily[i].temp.day) + "&#8457" + "</h2><div><h6>" + "Feels like: " + parseInt(data.daily[i].feels_like.day) +"&#8457" + "</h6></div>");
                  if(data.daily[i].weather[0].main === "Clear"){
                      $(".card-body"+[i]).append("<img src='../img/WX/sky-sun.gif'>");
                      $("body").css("background-image", "<img src='../img/WX/sunny-bkgd.gif'>");
@@ -74,7 +74,7 @@ var button = document.getElementById("searchButton")
                      $(".card-body"+[i]).append("<img src='../img/WX/snow.gif'>")
                  }
                  $(".card-body"+[i]).append("<h4>"+ data.daily[i].weather[0].main + "</h4>")
-                 $(".card-body"+[i]).append("<h4><div>"+ "Low: "+ parseInt(data.daily[i].temp.min) +"</div>"+"High: " + parseInt(data.daily[i].temp.max)+ "</div></h4>")
+                 $(".card-body"+[i]).append("<h4><div>"+ "Low: "+ parseInt(data.daily[i].temp.min) +"&#8457"+"</div>"+"High: " + parseInt(data.daily[i].temp.max)+ "&#8457"+"</div></h4>")
              }
 
          })
