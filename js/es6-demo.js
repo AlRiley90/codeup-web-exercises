@@ -1,7 +1,7 @@
 
 
-let name = "Jose";
-let day = "Tuesday";
+// let name = "Jose";
+// let day = "Tuesday";
 // const howAreYou = function (name){
 //     console.log("Hello, " + name + "!");
 // }
@@ -9,7 +9,7 @@ let day = "Tuesday";
 
 
 //Don't need parentheses if work with only one argument
-const howAreYou = name => `Hello, ${name.toUpperCase()}!`;
+// const howAreYou = name => `Hello, ${name.toUpperCase()}!`;
 
 
 
