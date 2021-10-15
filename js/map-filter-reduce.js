@@ -37,20 +37,29 @@ const users = [
 ];
 
 // #2 Create array of objects where each user object has at least 3 langs.
-let threeLangs = users.filter(function(language){
-    return language.languages.length >= 3;
-})
+
+// let threeLangs = users.filter(function(language){
+//     return language.languages.length >= 3;
+// })
+// console.log(threeLangs);
+
+//Arrow Function way
+let threeLangs = users.filter((language) => language.languages.length > 2);
 console.log(threeLangs);
 
-
 // #3 create an array of strings where each element is a user's email address
-let userEmail = users.map(function(person){
-    return person.email;
-})
+
+// let userEmail = users.map(function(person){
+//     return person.email;
+// })
+// console.log(userEmail);
+
+// Arrow function way
+let userEmail = users.map((person) => person.email)
 console.log(userEmail);
 
-
 // #4 get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+
 let totalExp = users.reduce(function(total, number){
     return total + number.yearsOfExperience;
 
@@ -59,6 +68,7 @@ let average = totalExp/users.length;
 console.log(totalExp);
 console.log(average);
 
+
 // #5 get the longest email from the list of users.
 let longestEmail = userEmail.reduce(function(total, letters){
    if(total.length > letters.length){
@@ -66,23 +76,32 @@ let longestEmail = userEmail.reduce(function(total, letters){
    } else{
        return letters
    }
-}, 0)
+}, "")
 console.log(longestEmail);
 
 // #6 get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-let instructorNames = users.reduce(function(final, names){
-    return final +", "+ names.name;
-}, "");
+// let instructorNames = users.reduce(function(final, user, index){
+//     if(index !== users.length - 1){
+//         return final + user.name+", ";
+//     }
+//     return final + user.name+". ";
+// }, "");
+// console.log("Your instructors are: " + instructorNames);
+
+//Alt way
+let instructorNames = users.map(function(user){
+    return user.name;
+}).join(", ")
+
 console.log("Your instructors are: " + instructorNames);
 
 
 // Bonus
-let specialLangs = users.reduce(function(special, language){
-    if(special.includes(language)){
-        return special
-    }else{
-        return [...special, language]
+let specialLangs = users.reduce(function(specialLans, language){
+    if(!specialLans.includes(language.languages)){
+        specialLans.push(language.languages);
     }
+    return specialLans;
 }, []);
 console.log(specialLangs);
