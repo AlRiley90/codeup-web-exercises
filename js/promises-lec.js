@@ -1,27 +1,25 @@
-
 "use strict";
 
 /*********************************************
  *        USING FETCH WITH PROMISES
  ******************************************** */
 
-var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+// var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
 // return of fetch request is a Promise object
 
 //TODO: console log the results of the above Promise. What is the result?
-console.log(pokemonAPI);
+// console.log(pokemonAPI);
 //TODO: add a method that runs if the Promise resolves successfully
 //TODO: add a method that runs if the Promise fails
 //TODO: In the callback function of the .then method, parse the response into JSON
-pokemonAPI.then(function(results){
-    console.log(results);
+// pokemonAPI.then(function(results){
+//     console.log(results);
 //     results.text().then((text) => {
 //         console.log(text)})
-    results.json().then((resultsObject) => console.log(resultsObject))
- }).catch(function(err){
-    console.log(err);
-})
-
+//     results.json().then((resultsObject) => console.log(resultsObject))
+//  }).catch(function(err){
+//     console.log(err);
+// })
 
 
 /*********************************************
@@ -44,10 +42,10 @@ pokemonAPI.then(function(results){
 //     console.log(err);
 // })
 
-fetch('https://pokeapi.co/api/v2/pokemon')
-    .then((response)=>response.json())
-    .then((jsonData)=>jsonData.results)
-    .then((results)=>results.forEach((result)=>console.log(result.name)));
+// fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
+//     .then((response)=>response.json())
+//     .then((jsonData)=>jsonData.results)
+//     .then((results)=>results.forEach((result)=>console.log(result.name)));
 
 // BONUS: Is there a way for us to clean up our code?
 
@@ -55,9 +53,31 @@ fetch('https://pokeapi.co/api/v2/pokemon')
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
 
+fetch('https://swapi.dev/api/films')
+
 // TODO: Use Promise chaining to console log the json response
-
+    .then((response)=>{
+      return response.json();
+    }).then((starWarsFilmsData)=>{
+    console.log(starWarsFilmsData);
+    starWarsFilmsData.results.forEach((film)=>{console.log(film.title)})
+})
 // TODO: chain another method that iterates through the results array and console logs the names
-
+//     .then((results)=>results.forEach((results)))
 // TODO: Demonstrate Promise.all and Promise.race
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+let starWarsAPI = fetch('https://swapi.dev/api/films');
+// This is how to get all the data from both API sources at the same time
+// Promise.all([starWarsAPI, pokemonAPI])
+//     .then((responses) => {
+//         return Promise.all(
+//             responses.map((response) => {
+//                     return response.json();
+//                 }
+//             ))
+//     }).then((parsedResults)=>{
+//     console.log(parsedResults);
+// });
 
+Promise.race([pokemonAPI, starWarsAPI])
+.then((response)=>console.log(response))
