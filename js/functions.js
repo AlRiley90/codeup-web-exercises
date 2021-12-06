@@ -10,9 +10,9 @@
  */
 
 function sayHello(name){
-    return "Hello, " + name;
+    return "Hello, " + name +"!";
 }
-console.log(sayHello());
+console.log(sayHello("codeup"));
 
 /**
  * TODO:
@@ -140,30 +140,30 @@ function identity(input){
 
 function getRandomNumber(min, max){
     //Need help with this one
+    return Math.floor(Math.random() * (max - min) + min);
 }
+
+console.log(getRandomNumber(1, 50));
+
 function first(input){
-    var firstLetter = input.charAt(0);
-    return firstLetter;
+    return input.charAt(0);
 }
 console.log(first("varsity"))
 
 function last(input){
-   var lastLetter = input.charAt(input.length-1);
-   return lastLetter;
+    return input.charAt(input.length - 1);
 }
 console.log(last("eagles"))
 
 function rest(input){
-    var allButFirstAndLast = input.substring(1, input.length-1);
-    return allButFirstAndLast;
+    return input.substring(1, input.length - 1);
 }
 console.log(rest("Mississippi"));
 
 function reverse(input){
     var splitString = input.split("");
     var reverseArray = splitString.reverse();
-    var joinArray = reverseArray.join("");
-    return joinArray;
+    return reverseArray.join("");
 }
 console.log(reverse("variety"));
 
@@ -175,8 +175,7 @@ function isNumeric(input){
 console.log(isNumeric("red"))
 
 function count(input){
-    var letterCount = input.length;
-    return letterCount;
+    return input.length;
 }
 console.log(count("fixture"))
 
